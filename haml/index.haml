@@ -1,0 +1,129 @@
+- $LOAD_PATH << '.'
+- require '_helpers'
+= render_file('layout/_wrap.haml')
+%body
+  = render_file('layout/_menu.haml')
+  .jumbotron
+    .container
+      %h1
+        Angličtina
+      %p
+        Z pohodlí vašeho domova.
+        %br
+        Pro samouky, online a zdarma.
+          
+  .container.content
+    %ul.activity-stream
+      %li.stream-item
+        .stream-item-type.rocket
+        %h2
+          Jsem začátečník
+
+        <a href="http://jazyky-online.info/anglictina/pro_zacatecniky.php">Jak se učit</a> angličtinu?
+
+        %h3
+          Základy
+        Anglická <a href="">abeceda</a>
+        %br
+        Angličtina <a href="#">pro děti</a>
+
+        %h3
+          Gramatika
+        Základní <a href="gramatika.html">anglická gramatika</a>, přehled časů a slovních tvarů
+
+        %h3
+          Slovíčka
+        <a href="uceni-slovicek.html">Učení se slovíček</a>
+        %br
+        <a href="#">Obrázkový slovník</a>
+      %li.stream-item
+        .stream-item-type.rocket.advanced
+        %h2
+          Jsem pokročilý
+
+        %h3
+          Gramatika
+        <a href="frazova-slovesa.html">Frázová slovesa</a>
+        %br
+        <a href="nepravidelna-slovesa.html">Nepravidelná slovesa</a>
+        %br
+        Přehled <a href="gramatika.html">anglické gramatiky</a>
+
+        %h3
+          Fráze
+        Anglické <a href="fraze.html">fráze a konverzace</a>
+
+        %h3
+          Slovíčka
+        <a href="uceni-slovicek.html">Učení se</a> slovíček
+        %br
+        <a href="#">Procvičování</a> slovíček
+        %br
+        <a href="#">Kartičky flashcards</a>
+        %br
+        Anglické <a href="#">věty</a>
+        %br
+        Anglická <a href="slovicka.html">slovíčka 1</a> přehledně
+        %br
+        Anglická <a href="#">slovíčka 2</a> přehledně
+        %br
+        Slovíčka <a href="#">podle témat</a>        
+
+
+
+
+      %li.stream-item
+        .stream-item-type.rocket.profi
+        %h2
+          Jsem velmi pokročilý
+
+        %h3
+          Anglický jazyk
+        <a href="#">Business English</a>
+        %br
+        <a href="#">Životopis</a> v Angličtině
+        %br
+        Angličtina <a href="#">ve světě</a>
+        %br
+        <a href="#">Audio</a>
+        %br
+        <a href="#">Video</a>
+        %br
+        <a href="#">Učebnice</a>
+
+        %h3
+          Procvičování angličtiny
+        Jazykové <a href="#">hry</a>
+        %br
+        Online <a href="#">testy</a>
+
+        %h3
+          Slovíčka
+        Odborná <a href="#">terminologie</a> 
+
+        %h3
+          Slovníky
+        Anglický <a href="#">slovník</a>
+        %br
+        Anglický <a href="#">překladač</a> 
+
+        %h3
+          Další materiály
+        <a href="#">Literatura</a>
+        %br
+        Anglická <a href="#">přísloví</a>
+        %br
+        <a href="#">Maturitní otázky</a>
+        %br
+        Jazykové <a href="#">zkoušky</a>
+        %br
+        Jazykové <a href="#">aplikace</a>
+        %br
+        Pro <a href="#">mobilní telefony</a>
+        %br
+        <a href="#">Cestování</a>    
+
+    %p.stream-item-keywords
+      Na těchto stránkách naleznete materiály pro podporu výuky anglického jazyka. Obsah je přehledně a logicky uspořádán do modulů, které jsou neustále aktualizovány a doplňovány. Naleznete zde například moduly anglická gramatika, anglická slovíčka, procvičování, obrázkový slovník, anglické fráze a další užitečné informace. Naším cílem je vytvořit informační zdroj obsahující všechny potřebné informace k tomu, aby se uživatelé snáze naučili anglický jazyk. Věříme, že na našich stránkách najdete vše, co budete ke svému studiu anglického jazyka potřebovat.
+
+  = render_file('layout/_footer.haml')

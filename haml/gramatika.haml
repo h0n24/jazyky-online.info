@@ -1,0 +1,869 @@
+- $LOAD_PATH << '.'
+- require '_helpers'
+= render_file('layout/_wrap.haml')
+%body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
+  = render_file('layout/_menu.haml')
+  .jumbotron.small
+    .container
+      %h1
+        Anglická gramatika<small>, základní přehled</small>
+          
+  .container.content
+    .row
+      .col-md-2
+        .hidden-print.affix-side.affix-margin
+          %h3.page-header
+            Stáhněte si
+          %ul.nav.nav-sidenav
+            %li
+              %a{:href => "#"}
+                Abeceda
+            %li
+              %a{:href => "#"}
+                Podstatná jména
+            %li
+              %a{:href => "#"}
+                Přídavná jména
+            %li
+              %a{:href => "#"}
+                Členy
+            %li
+              %a{:href => "#"}
+                Zájmena
+            %li
+              %a{:href => "#"}
+                Číslovky
+            %li
+              %a{:href => "#"}
+                Datum a čas
+            %li
+              %a{:href => "#"}
+                Slovesa
+            %li
+              %a{:href => "#"}
+                Příslovce
+            %li
+              %a{:href => "#"}
+                Předložky
+            %li
+              %a{:href => "#"}
+                Spojky
+            %li
+              %a{:href => "#"}
+                Citoslovce
+            %li
+              %a{:href => "#"}
+                Britská a americká angličtina
+        .hidden-print.hidden-xs.affix.affix-side{:role => "complementary", :"data-spy" => "affix", :"data-offset-top" => "738", :"data-offset-bottom" => "10"}
+          %h3.page-header
+            Kategorie
+          %ul.nav.nav-sidenav#nav-scrollpsy
+            %li
+              %a{:href => "#cleny"}
+                Členy
+            %li
+              %a{:href => "#slovesa"}
+                Slovesa
+            %li
+              %a{:href => "#podstatna-jmena"}
+                Podstatná jména
+            %li
+              %a{:href => "#pridavna-jmena"}
+                Přídavná jména
+            %li
+              %a{:href => "#prislovce"}
+                Příslovce
+            %li
+              %a{:href => "#zajmena"}
+                Zájmena
+            %li
+              %a{:href => "#predlozky"}
+                Předložky
+            %li
+              %a{:href => "#spojky"}
+                Spojky
+
+      .col-md-9.col-md-offset-1
+        %h2.page-header#cleny
+          Členy <small>(Articles)</small>
+        %h3
+          Člen neurčitý
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %th
+                a cat
+              %td
+                nějaká kočka
+              %td
+                a (nějaký)
+            %tr
+              %th
+                cats
+              %td
+                kočky
+              %td
+                množné číslo je bez členu
+            %tr
+              %th
+                an orange
+              %td
+                nějaký pomeranč
+              %td
+                jen u slov začínajícího na samohlásku se používá člen "an"
+
+        %h3
+          Člen určitý
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %th
+                the cat
+              %td
+                (tato) kočka
+              %td
+                vyslovuje se /ðə/, což česky zní jako "d"
+            %tr
+              %th
+                the orange
+              %td
+                (tento) pomeranč
+              %td
+                jen u slov začínajícího na samohlásku, vyslovuje se /ðiː/, což česky zní jako "dí"
+
+        %h2.page-header#slovesa
+          Slovesa <small>(Verbs)</small>
+
+        %h3
+          Základní slovesa
+        %p
+          <abbr title="být">be</abbr>, <abbr title="mít">have</abbr>, <abbr title="dělat">do</abbr>, <abbr title="jít">go</abbr>, <abbr title="moci">can</abbr>, <abbr title="pomoci">help</abbr>, <abbr title="mluvit">speak</abbr>, <abbr title="číst">read</abbr>
+
+        %h3
+          Časy
+
+        %h4
+          Přítomný čas
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                I read
+              %td
+                Do I read?
+              %td
+                I do not read
+            %tr
+              %td
+                I am reading
+              %td
+                Am I reading?
+              %td
+                I am not reading
+
+        %h4
+          Minulý čas
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                I answered
+              %td
+                Did I answer?
+              %td
+                I did not answer
+            %tr
+              %td
+                I was answering
+              %td
+                Was I answering?
+              %td
+                I was not answering
+
+        %h4
+          Budoucí čas
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                I will go
+              %td
+                Will I go?
+              %td
+                I will not go
+
+        %h3
+          Srovnání časů
+        .table-responsive
+          %table.table.table-condensed.table-bordered.table-1-col.table-striped
+            %tr
+              %th.table-no-border-top.table-no-border-left.table-no-background
+              %th
+                I
+              %th
+                you
+              %th
+                he/she/it
+              %th
+                we
+              %th
+                you
+              %th
+                they
+            %tr
+              %th{:rowspan => "2"}
+                Přítomný čas
+              %td
+                work
+              %td
+                work
+              %td
+                works
+              %td
+                work
+              %td
+                work
+              %td
+                work
+            %tr
+              %td
+                am
+              %td
+                are
+              %td
+                is
+              %td
+                are
+              %td
+                are
+              %td
+                are
+            %tr
+              %th{:rowspan => "2"}
+                Minulý čas
+              %td
+                worked
+              %td
+                worked
+              %td
+                worked
+              %td
+                worked
+              %td
+                worked
+              %td
+                worked
+            %tr
+              %td
+                was
+              %td
+                were
+              %td
+                was
+              %td
+                were
+              %td
+                were
+              %td
+                were
+            %tr
+              %th{:rowspan => "2"}
+                Budoucí čas
+              %td
+                will work
+              %td
+                will work
+              %td
+                will work
+              %td
+                will work
+              %td
+                will work
+              %td
+                will work
+            %tr
+              %td
+                will be
+              %td
+                will be
+              %td
+                will be
+              %td
+                will be
+              %td
+                will be
+              %td
+                will be
+        %h3
+          Způsobová slovesa <small>(Modal Verbs)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                I can
+              %td
+                mohu
+            %tr
+              %td
+                I cannot
+              %td
+                nemohu
+            %tr
+              %td
+                I could
+              %td
+                mohl bych
+            %tr
+              %td
+                I could not
+              %td
+                nemohl bych
+            %tr
+              %td
+                I may
+              %td
+                smím
+            %tr
+              %td
+                I am allowed to
+              %td
+                je mi dovoleno
+            %tr
+              %td
+                I may not
+              %td
+                nesmím
+            %tr
+              %td
+                I must
+              %td
+                musím
+            %tr
+              %td
+                I had to
+              %td
+                musel jsem
+            %tr
+              %td
+                I have to
+              %td
+                musím
+            %tr
+              %td
+                I need not
+              %td
+                nemusím
+            %tr
+              %td
+                I should
+              %td
+                měl bych
+            %tr
+              %td
+                I would (go)
+              %td
+                (šel) bych
+        %h3
+          Další studium
+        <a href="nepravidelna-slovesa.html" class="btn btn-default">Nepravidelná slovesa</a>
+        <a href="frazova-slovesa.html" class="btn btn-default">Frázová slovesa</a>
+        
+
+        %h2.page-header#podstatna-jmena
+          Podstatná jména <small>(Nouns)</small>
+
+        %h3
+          Jednotné a množné číslo
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                cat
+              %td
+                cats
+            %tr
+              %td
+                table
+              %td
+                tables
+            %tr
+              %td
+                photo
+              %td
+                photos
+            %tr
+              %td
+                hero
+              %td
+                heroes
+            %tr
+              %td
+                bus
+              %td
+                buses
+
+        %h3
+          Nepravidelná
+
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                child
+              %td
+                children
+            %tr
+              %td
+                foot
+              %td
+                feet
+            %tr
+              %td
+                man
+              %td
+                men
+            %tr
+              %td
+                mouse
+              %td
+                mice
+            %tr
+              %td
+                tooth
+              %td
+                teeth
+
+        %h3
+          Nepočitatelná <small>(látky a abstraktní pojmy)</small>
+        water, food, music, success
+
+        %h2.page-header#pridavna-jmena
+          Přídavná jména <small>(Adjectives)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                nice
+              %td
+                nicer
+              %td
+                the nicest
+            %tr
+              %td
+                important
+              %td
+                more important
+              %td
+                the most important
+            %tr
+              %td
+                beautiful
+              %td
+                more beautiful
+              %td
+                the most beautiful 
+
+        %h3
+          Nepravidelná <small>(Irregular adjectives)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                bad/evil
+              %td
+                worse
+              %td
+                worst
+            %tr
+              %td
+                far
+              %td
+                further
+              %td
+                furthest
+            %tr
+              %td
+                good
+              %td
+                better
+              %td
+                best
+            %tr
+              %td
+                many/much
+              %td
+                more
+              %td
+                most
+            %tr
+              %td
+                near
+              %td
+                nearer
+              %td
+                nearest
+            %tr
+              %td
+                old
+              %td
+                elder
+              %td
+                eldest
+
+
+        %h2.page-header#prislovce
+          Příslovce <small>(Adverbs)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-3-col.table-borderless
+            %tr
+              %td
+                near 
+              %td
+                nearer 
+              %td
+                the nearest
+            %tr
+              %td
+                quickly
+              %td
+                more quickly 
+              %td
+                the most quickly 
+
+        %h2.page-header#zajmena
+          Zájmena <small>(Pronouns)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-bordered.table-striped.table-all-col
+            %tr
+              %td
+                I
+              %td
+                me
+              %td
+                my
+              %td
+                mine 
+              %td
+                myself
+            %tr
+              %td
+                you 
+              %td
+                you 
+              %td
+                your
+              %td
+                yours
+              %td
+                youself
+            %tr
+              %td
+                he 
+              %td
+                him 
+              %td
+                his 
+              %td
+                his 
+              %td
+                himself
+            %tr
+              %td
+                she
+              %td
+                her 
+              %td
+                her 
+              %td
+                hers
+              %td
+                herself
+            %tr
+              %td
+                it
+              %td
+                it
+              %td
+                its
+              %td
+                its
+              %td
+                itself
+            %tr
+              %td
+                we 
+              %td
+                us
+              %td
+                our
+              %td
+                ours
+              %td
+                ourselves
+            %tr
+              %td
+                you 
+              %td
+                you 
+              %td
+                your
+              %td
+                yours
+              %td
+                yourselves
+            %tr
+              %td
+                they 
+              %td
+                them
+              %td
+                their
+              %td
+                theirs
+              %td
+                themselves
+        %h3
+          Neurčitá zájmena
+
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                a couple 
+              %td
+                pár 
+            %tr
+              %td
+                a little, a few
+              %td
+                trochu, pár, několik
+            %tr
+              %td
+                a lot, much, many
+              %td
+                hodně, mnoho
+            %tr
+              %td
+                some, any 
+              %td
+                nějaký, jakýsi
+            %tr
+              %td
+                no, none 
+              %td
+                žádný 
+            %tr
+              %td
+                one 
+              %td
+                jeden
+            %tr
+              %td
+                all 
+              %td
+                všechny
+            %tr
+              %td
+                every, each
+              %td
+                každý
+            %tr
+              %td
+                both 
+              %td
+                oba
+            %tr
+              %td
+                plenty of
+              %td
+                hodně
+            %tr
+              %td
+                enough
+              %td
+                dost
+            %tr
+              %td
+                other, another
+              %td
+                jiný, další
+
+        %h2.page-header#predlozky
+          Předložky <small>(Prepositions)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                above 
+              %td
+                nad 
+            %tr
+              %td
+                after 
+              %td
+                po 
+            %tr
+              %td
+                along 
+              %td
+                podél 
+            %tr
+              %td
+                among 
+              %td
+                mezi (několika) 
+            %tr
+              %td
+                around 
+              %td
+                kolem 
+            %tr
+              %td
+                at 
+              %td
+                u 
+            %tr
+              %td
+                before 
+              %td
+                před (časově)
+            %tr
+              %td
+                below
+              %td
+                pod
+            %tr
+              %td
+                between  
+              %td
+                mezi (dvěma) 
+            %tr
+              %td
+                beyond  
+              %td
+                za  
+            %tr
+              %td
+                by  
+              %td
+                poblíž  
+            %tr
+              %td
+                down  
+              %td
+                dolů 
+            %tr
+              %td
+                from  
+              %td
+                z 
+            %tr
+              %td
+                in front of 
+              %td
+                před 
+            %tr
+              %td
+                in  
+              %td
+                v
+            %tr
+              %td
+                into  
+              %td
+                do, dovnitř
+            %tr
+              %td
+                left  
+              %td
+                doleva  
+            %tr
+              %td
+                on  
+              %td
+                na  
+            %tr
+              %td
+                right  
+              %td
+                doprava 
+            %tr
+              %td
+                through 
+              %td
+                skrz 
+            %tr
+              %td
+                to 
+              %td
+                do 
+            %tr
+              %td
+                under   
+              %td
+                pod   
+            %tr
+              %td
+                up   
+              %td
+                nahoru
+
+
+        %h2.page-header#spojky
+          Spojky <small>(Conjunctions)</small>
+
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless
+            %tr
+              %td
+                and
+              %td
+                a 
+            %tr
+              %td
+                as well as
+              %td
+                i, stejně jako
+            %tr
+              %td
+                although 
+              %td
+                ačkoliv
+            %tr
+              %td
+                still 
+              %td
+                avšak, přesto
+            %tr
+              %td
+                however 
+              %td
+                avšak
+            %tr
+              %td
+                or 
+              %td
+                nebo
+            %tr
+              %td
+                either … or 
+              %td
+                buď … nebo
+            %tr
+              %td
+                so, thus
+              %td
+                proto, tak
+
+  = render_file('layout/_footer.haml')

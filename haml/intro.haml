@@ -1,0 +1,48 @@
+- $LOAD_PATH << '.'
+- require '_helpers'
+= render_file('layout/_wrap.haml')
+%body
+  .jumbotron.no-touch.intro
+    .hi-icon-wrap.hi-icon-effect-5.hi-icon-effect-5a
+      <a href="intro.html" class="hi-icon hi-icon-earth navbar-brand" title="jazyky-online.info">jazyky-online</a>
+    .container
+      %h1
+        jazyky-online<small>.info</small>
+          
+  .container.content
+    .row.intro
+      .col-md-6.intro-left
+        .h2
+          Chci se učit
+      .col-md-6.intro-right
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.en
+            angličtinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.de
+            němčinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.fr
+            francouzštinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.es
+            španělštinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.ru
+            ruštinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.cn
+            čínštinu
+        .h2
+          %a{:href => "index.html"}
+            .intro-flags.jp
+            japonštinu
+    
+
+  = render_file('layout/_footer.haml')

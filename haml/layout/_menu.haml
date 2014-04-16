@@ -1,0 +1,56 @@
+%header.navbar.navbar-static-top#top{:role => "navigation"}
+  .container
+    .navbar-header.no-touch
+      %button.navbar-toggle{:type => "button", :"data-toggle" =>"collapse", "data-target" => ".menu-navbar-collapse"}
+        %span.sr-only= "Zobrazit navigaci"
+        - (0...3).each do |i|
+          %span.icon-bar
+      .hi-icon-wrap.hi-icon-effect-5.hi-icon-effect-5a
+        <a href="index.html" class="hi-icon hi-icon-earth navbar-brand" title="Jazyky-online.info / angličtina">jazyky-online</a>
+      /  
+        %a.navbar-brand{:href => "#"}
+          Jazyky-online
+
+    %nav.collapse.navbar-collapse.menu-navbar-collapse{:role => "navigation"}
+      %ul.nav.navbar-nav
+        %li.dropdown
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gramatika</a>
+          %ul.dropdown-menu
+            <li><a href="gramatika.html">Přehled gramatiky</a></li>
+            <li><a href="frazova-slovesa.html">Frázová slovesa</a></li>
+            <li><a href="nepravidelna-slovesa.html">Nepravidelná slovesa</a></li>
+        %li.dropdown
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slovíčka</a>
+          %ul.dropdown-menu
+            <li><a href="slovicka.html">Anglická slovíčka</a></li>
+            <li><a href="uceni-slovicek.html">Učení se</a></li>
+            <li><a href="procvicovani-slovicek.html">Procvičování</a></li>
+        %li.dropdown
+          %a{:href => "fraze.html"}= "Fráze"
+        %li
+          %a{:href => "http://jazyky-online.info/deti/index.php"}= "Pro děti"
+
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %span.ucim-se
+            %span.ucim-se-label.sr-hidden
+              Právě se učím
+            .btn-group
+              %button.btn.btn-default.dropdown-toggle{:type => "button", :"data-toggle" => "dropdown"}
+                angličtinu
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li
+                  %a{:href => "#"}= "angličtinu"
+                %li
+                  %a{:href => "#"}= "němčinu"
+                %li
+                  %a{:href => "#"}= "francouzštinu"
+                %li
+                  %a{:href => "#"}= "španělštinu"
+                %li
+                  %a{:href => "#"}= "ruštinu"
+                %li
+                  %a{:href => "#"}= "čínštinu"
+                %li
+                  %a{:href => "#"}= "japonštinu"

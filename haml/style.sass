@@ -1,0 +1,673 @@
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+@import "fonts.css"
+
+$primary-color: #0E83CD // anglická
+//$primary-color: #EEA303 // německá
+//$primary-color: #41AB6B // francouzská
+//$primary-color: #F06060 // španělština
+//$primary-color: #702FA8 // ruština
+//$primary-color: #64BB5D // čínština
+//$primary-color: #D54F30 // japonština
+//$primary-color: #3851BC // případný budoucí jazyk
+//$primary-color: #96A94B // případný budoucí jazyk
+
+$primary-color-darken: darken($primary-color, 20%)
+$primary-color-lighten: lighten($primary-color, 20%)
+
+// opravy bootstrapu
+.navbar
+  margin-bottom: 0
+  border: 0
+.ucim-se
+  line-height: 50px
+.ucim-se-label
+  padding: 6px 10px
+  line-height: 1.42857143
+.ucim-se .btn
+  margin-top: -4px
+  border: 1px solid $primary-color
+  font-size: 10pt
+  background-image: none
+  background-color: #fff
+  color: $primary-color
+// barvy
+body
+  font-family: 'Open Sans', Calibri, Arial, sans-serif
+  font-size: 14pt
+
+.page-header:before
+  content: ""
+  margin-top: -40px
+  padding-top: 40px
+  display: block
+
+.navbar a
+  color: $primary-color
+
+.container.content
+  .btn,.btn:hover
+    background: none
+  .btn
+    border: 1px solid $primary-color
+    &:hover
+      border-color: $primary-color-darken
+  a
+    color: $primary-color
+    background: -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient($primary-color, $primary-color)
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px
+    background-repeat: no-repeat, no-repeat, repeat-x
+    text-shadow: 0.03em 0 #FFF, -0.03em 0 #FFF, 0 0.03em #FFF, 0 -0.03em #FFF, 0.06em 0 #FFF, -0.06em 0 #FFF, 0.09em 0 #FFF, -0.09em 0 #FFF, 0.12em 0 #FFF, -0.12em 0 #FFF, 0.15em 0 #FFF, -0.15em 0 #FFF
+    background-position-y: 87%, 87%, 87%
+    background-position-x: 0%, 100%, 0%
+    &:hover
+      text-decoration: none
+      color: $primary-color-darken
+      background: -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient($primary-color-darken, $primary-color-darken)
+      background-size: 0.05em 1px, 0.05em 1px, 1px 1px
+      background-repeat: no-repeat, no-repeat, repeat-x
+      background-position-y: 87%, 87%, 87%
+      background-position-x: 0%, 100%, 0%
+
+
+::selection
+  background: rgba(0,0,0,.2) !important
+  text-shadow: none
+
+h3, .h3
+  margin-top: 1em
+  margin-bottom: 1em
+
+h4, .h4, h5, .h5, h6, .h6
+  margin-top: 1em
+  margin-bottom: 1em
+
+.nav
+  font-size: 10pt
+
+.nav>li>a:hover, .nav>li>a:focus
+  background-color: #E8E8E8
+
+.navbar-toggle .icon-bar
+  background-color: $primary-color
+
+.nav-sidenav
+  max-height: 60%
+  max-height: 80vh
+  min-width: 163px
+  width: 100%
+  overflow-y: scroll
+  overflow-x: hidden
+  &::-webkit-scrollbar
+    margin-left: 2px
+    height: .2em
+    width: .2em
+  &:hover::-webkit-scrollbar
+    height: .8em
+    width: .8em    
+  &::-webkit-scrollbar-track-piece
+    transition: inherit
+    background: #fff
+  &::-webkit-scrollbar-thumb
+    background: #E8E8E8
+  &:hover::-webkit-scrollbar-thumb
+    background: #ccc
+  & li:nth-child(4n)
+    margin-bottom: 2em
+  &.nav>li
+    &.active
+      border-left: 0.3em solid $primary-color
+    a
+      background: none
+      padding: .4em 1em
+  &.nav>li>a:hover
+    background: none
+    text-shadow: none
+    background-color: #E8E8E8
+    border-right: 2px solid #fff
+
+.affix-side
+  top: 2em
+  & .page-header
+    min-width: 165px // nezapomínat na margin +2 !
+    width: 100%
+  &.affix-margin .page-header
+    margin-top: 47px
+  &.affix .page-header
+    margin-top: 10px
+
+.jumbotron
+  background-color: $primary-color
+  color: #fff
+  & h1
+    margin-top: 0
+    width: 100%
+    text-align: center
+    & small
+      color: #fff
+      color: rgba(255, 255, 255, 0.5)
+  & p
+    margin-top: .5em
+    width: 100%
+    text-align: center
+  &.intro
+    background-color: #435A6B
+    .container
+      margin-top: 7em
+    .hi-icon-wrap
+      left: 50%
+      margin-left: -75px
+      margin-top: 1em
+      .hi-icon
+        background: transparent
+        border: none
+        &:hover
+          color: #fff !important
+          box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.05) !important
+
+.intro .h2
+  margin-top: 0
+  margin-bottom: 2em
+  line-height: 40px
+
+.container.content .intro a
+  color: #587285
+  background: -webkit-linear-gradient(#FFF,#FFF),-webkit-linear-gradient(#FFF,#FFF),-webkit-linear-gradient(#587285,#587285)
+  -webkit-background-size: .05em 1px,.05em 1px,1px 1px
+  background-size: .05em 1px,.05em 1px,1px 1px
+  background-position-y: 87%,87%,87%
+  background-position-x: 0,100%,0
+  background-repeat: no-repeat,no-repeat,repeat-x
+  &:hover
+    color: #2F4351
+    background: -webkit-linear-gradient(#FFF,#FFF),-webkit-linear-gradient(#FFF,#FFF),-webkit-linear-gradient(#2F4351,#2F4351)
+    -webkit-background-size: .05em 1px,.05em 1px,1px 1px
+    background-size: .05em 1px,.05em 1px,1px 1px
+    background-position-y: 87%,87%,87%
+    background-position-x: 0,100%,0
+    background-repeat: no-repeat,no-repeat,repeat-x
+  
+
+.intro-flags
+  width: 70px
+  height: 47px
+  float: left
+  padding-right: 3em
+  background-repeat: no-repeat
+  &.en
+    background-image: url('img/flags/en.png')
+  &.de
+    background-image: url('img/flags/de.png')
+  &.fr
+    background-image: url('img/flags/fr.png')
+  &.es
+    background-image: url('img/flags/es.png')
+  &.ru
+    background-image: url('img/flags/ru.png')
+  &.cn
+    background-image: url('img/flags/cn.png')
+  &.jp
+    background-image: url('img/flags/jp.png')
+
+
+.jumbotron.small
+  padding-top: 1.5em
+  padding-bottom: 1.5em
+
+.activity-stream
+  margin: 0 0 0 5em
+  padding: 0
+  list-style: none
+
+.stream-item
+  padding: 2em 0 10em 10em
+  border-left: 0.3em solid #E8E8E8
+  position: relative
+  &:first-child:before
+    width: 3px
+    display: block
+    content: ""
+    background: #FFF
+    height: 15px
+    top: 0
+    left: -3px
+    position: absolute
+  &:before, &:after
+    display: table
+    content: ""
+    line-height: 0
+  & h2
+    margin-bottom: 1em
+    margin-left: -0.5em
+    color: #E8E8E8
+    font-size: 38pt
+    font-weight: 100
+
+.stream-item-type
+  position: absolute
+  text-align: center
+  padding: 2em
+  width: 10em
+  height: 10em
+  border: 0.3em solid #E8E8E8
+  border-radius: 10em
+  display: block
+  left: -5em
+  top: 0
+  background-color: #fff
+  &.rocket
+    background-image: url('img/iconmonstr-rocket-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-rocket-icon.svg')
+    background-repeat: no-repeat
+    background-size: 7em 7em
+    background-position: 1.3em 1.3em
+    &.advanced
+      background-image: url('img/iconmonstr-rocket-8-icon-256.png') // fallback pro starší prohlížeče
+      background-image: none, url('img/iconmonstr-rocket-8-icon.svg')
+    &.profi
+      background-image: url('img/iconmonstr-rocket-11-icon-256.png') // fallback pro starší prohlížeče
+      background-image: none, url('img/iconmonstr-rocket-11-icon.svg')
+
+.stream-item-keywords
+  border: 0.3em solid #E8E8E8
+  padding: 2em
+  margin-bottom: 2em
+  font-size: 11pt
+
+.skill-tree
+  width: 100%
+  overflow: hidden
+
+.skill-tree, .skills
+  list-style: none
+  padding-left: 0
+
+.skill-tree-row
+  display: table
+  margin-bottom: -2em
+
+.skills
+  border-top: .3em solid #E8E8E8
+  margin-top: 3.5em
+
+.skill-label
+  position: absolute
+  top: 7.5em
+  width: 6.8em
+  left: 0
+
+.skill
+  position: relative
+  text-align: center
+  padding: 2em
+  width: 7em
+  height: 7em
+  border: .3em solid #E8E8E8
+  border-radius: 7em
+  display: block
+  margin-right: 2em
+  margin-top: -3.5em
+  margin-bottom: 7em
+  float: left
+  background: #FFF
+  background-image: url('img/icons.png')
+  background-repeat: no-repeat
+  background-position: 24px 28px
+  transition: all .3s ease-in
+  &:hover
+    border-color: #ddd
+  &:last-child
+    margin-right: 0
+  & a
+    width: 7em
+    height: 10em
+    display: block
+    top: -2.3em
+    left: -2.3em
+    position: relative
+    background: none !important
+    border-radius: 5em
+    border: 1px solid rgba(0, 0, 0, 0)
+  &.matematika
+    background-position: -196px 28px
+  &.cisla
+    background-position: -639px -760px
+  &.latky
+    background-position: -416px -302px
+  &.zemepis
+    background-position: -195px -522px
+  &.dum
+    background-position: -200px -873px
+  &.napoje
+    background-position: -746px -302px
+  &.nadoby
+    background-position: -414px 28px
+  &.barvy
+    background-position: 24px -188px
+  &.rodina
+    background-position: -200px -1087px
+  &.telo
+    background-position: -200px -975px
+  &.jidlo
+    background-position: -85px -412px
+  &.ovoce
+    background-position: -305px -302px
+  &.zelenina
+    background-position: -305px -522px
+  &.mesto
+    background-position: -419px -1087px
+  &.zvirata
+    background-position: -196px -188px
+  &.priroda
+    background-position: -746px -412px
+  &.obleceni
+    background-position: 21px -1089px
+  &.stroje
+    background-position: -89px -1199px
+  &.nabytek
+    background-position: -525px -412px
+  &.doprava
+    background-position: -196px -80px
+  &.povolani
+    background-position: -419px -762px
+  &.cas
+    background-position: -530px -870px
+  &.pridavna-jmena
+    background-position: 24px 28px
+  &.slovesa
+    background-position: 24px 28px
+  &.zajmena
+    background-position: 24px 28px
+
+.skill-tree.old .skill
+  position: relative
+  text-align: center
+  padding: 2em
+  width: 7em
+  height: 7em
+  border: .3em solid #E8E8E8
+  border-radius: 7em
+  display: block
+  margin-right: 2em
+  margin-top: -3.5em
+  margin-bottom: 7em
+  float: left
+  background: #FFF
+  background-image: none
+  background-repeat: no-repeat
+  background-size: 5em 5em
+  background-position: .9em .9em
+  transition: all .3s ease-in
+  &:hover
+    border-color: #ddd
+  &:last-child
+    margin-right: 0
+  & a
+    width: 7em
+    height: 10em
+    display: block
+    top: -2.3em
+    left: -2.3em
+    position: relative
+    background: none !important
+    border-radius: 5em
+    border: 1px solid rgba(0, 0, 0, 0)
+  &.matematika
+    background-image: url('img/iconmonstr-calculator-6-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-calculator-6-icon.svg')
+  &.cisla
+    background-image: url('img/iconmonstr-sort-22-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-sort-22-icon.svg')
+  &.latky
+    background-image: url('img/iconmonstr-flask-5-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-flask-5-icon.svg')
+  &.zemepis
+    background-image: url('img/iconmonstr-anchor-4-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-anchor-4-icon.svg')
+  &.dum
+    background-image: url('img/iconmonstr-christmas-house-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-christmas-house-icon.svg')
+  &.napoje
+    background-image: url('img/iconmonstr-coffee-8-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-coffee-8-icon.svg')
+  &.nadoby
+    background-image: url('img/iconmonstr-beer-10-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-beer-10-icon.svg')
+  &.barvy
+    background-image: url('img/iconmonstr-magic-3-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-magic-3-icon.svg')
+  &.rodina
+    background-image: url('img/iconmonstr-favorite-3-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-favorite-3-icon.svg')
+  &.telo
+    background-image: url('img/iconmonstr-user-2-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-user-2-icon.svg')
+  &.jidlo
+    background-image: url('img/iconmonstr-christmas-gingerbread-3-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-christmas-gingerbread-3-icon.svg')
+  &.ovoce
+    background-image: url('img/iconmonstr-apple-os-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-apple-os-icon.svg')
+  &.zelenina
+    background-image: url('img/iconmonstr-pen-12-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-pen-12-icon.svg')
+  &.mesto
+    background-image: url('img/iconmonstr-shop-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-shop-icon.svg')
+  &.zvirata
+    background-image: url('img/iconmonstr-christmas-reindeer-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-christmas-reindeer-icon.svg')
+  &.priroda
+    background-image: url('img/iconmonstr-brightness-3-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-brightness-3-icon.svg')
+  &.obleceni
+    background-image: url('img/iconmonstr-christmas-hat-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-christmas-hat-icon.svg')
+  &.stroje
+    background-image: url('img/iconmonstr-wrench-5-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-wrench-5-icon.svg')
+  &.nabytek
+    background-image: url('img/iconmonstr-3d-view-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-3d-view-icon.svg')
+  &.doprava
+    background-image: url('img/iconmonstr-direction-7-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-direction-7-icon.svg')
+  &.povolani
+    background-image: url('img/iconmonstr-briefcase-4-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-briefcase-4-icon.svg')
+  &.cas
+    background-image: url('img/iconmonstr-time-10-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-time-10-icon.svg')
+  &.pridavna-jmena
+    background-image: url('img/iconmonstr-copy-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-copy-icon.svg')
+  &.slovesa
+    background-image: url('img/iconmonstr-copy-2-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-copy-2-icon.svg')
+  &.zajmena
+    background-image: url('img/iconmonstr-copy-3-icon-256.png') // fallback pro starší prohlížeče
+    background-image: none, url('img/iconmonstr-copy-3-icon.svg')
+
+.table-4th-row tr:nth-child(4n) td:last-child
+  padding-bottom: 2em
+
+.table-3-col
+  td:nth-child(1),th:nth-child(1),td:nth-child(2),th:nth-child(2)
+    width: 25%
+
+.table-2-col
+  td:nth-child(1),th:nth-child(1)
+    width: 25%
+
+.table-1-col
+  tr:nth-child(1) > td:nth-child(1), tr:nth-child(1) > th:nth-child(1)
+    width: 25%
+
+.table-all-col //hack pro rovnoměrnou tabulku
+  td, th
+    width: 1%
+
+
+.table-condensed
+  font-size: 11pt
+
+.table-borderless *
+  border: none !important
+
+.table-no-border-top
+  border-top: 1px solid #fff !important
+
+.table-no-border-right
+  border-right: 1px solid #fff !important
+
+.table-no-border-bottom
+  border-bottom: 1px solid #fff !important
+
+.table-no-border-left
+  border-left: 1px solid #fff !important
+
+.table-no-background
+  background: none !important
+
+.floatThead-container
+  background: #fff
+
+footer
+  margin-top: 2em
+.footer-links
+  margin-top: 1em
+  padding-left: 0
+  color: #999
+  width: 100%
+  text-align: center
+  font-size: 10pt
+  & li
+    display: inline
+  & a
+    color: #999
+
+.hi-icon
+  padding: 0
+
+.hi-icon-wrap
+  margin: 0
+  padding: 0
+  position: absolute
+
+.hi-icon-wrap .hi-icon
+  background: $primary-color
+  margin-top: -16px
+
+.hi-icon-wrap .hi-icon:hover
+  color: #2A6496
+  text-decoration: none
+
+.hi-icon-effect-5 .hi-icon
+  border: 2px solid $primary-color
+  box-shadow: 0 0 0 4px #fff
+  color: #fff
+
+.hi-icon-effect-5 .hi-icon:hover
+  color: $primary-color !important
+  box-shadow: 0 0 0 8px rgba($primary-color, 0.3) !important
+
+@media print
+  .table-3-col
+    td:nth-child(1),th:nth-child(1),td:nth-child(2),th:nth-child(2)
+      width: 25%
+  .table-2-col
+    td:nth-child(1),th:nth-child(1)
+      width: 25%
+  .table-responsive
+    overflow: visible !important
+    border: none !important
+  abbr
+    border: none !important
+
+@media screen and (max-width: 991px)
+  .affix
+    position: relative
+
+@media screen and (min-width: 992px)
+  .intro-left
+    text-align: right
+    & .h2
+      margin-right: 45px
+  .intro-right
+    text-align: left
+    & .h2
+      margin-left: -45px
+
+@media screen and (min-width: 768px)
+  .jumbotron
+    margin-bottom: 3em
+  .jumbotron.small
+    & h1
+      font-size: 28pt
+      margin: 0
+      text-align: left
+      padding-left: 100px
+  .menu-navbar-collapse
+    margin-left: 90px !important
+  .hi-icon
+    width: 90px
+    height: 90px
+
+
+@media screen and (max-width: 767px)
+  .hi-icon
+    width: 68px
+    height: 68px
+    margin-left: -16px
+    &:before
+      font-size: 35px
+      line-height: 68px
+  .ucim-se .btn
+    margin-left: 14px !important
+
+  .activity-stream
+    margin: 0
+
+  .stream-item
+    padding: 0 0 5em 1em
+    & h2
+      margin: 0 0 1em 1em
+      padding-top: 0.5em
+      font-size: 24pt
+      font-weight: 100
+
+  .stream-item-type
+    padding: 2em
+    width: 2em
+    height: 2em
+    border-radius: 4em
+    left: -3em
+    &.rocket
+      background-size: 2em 2em
+      background-position: 1.5em 1em
+
+  .stream-item-keywords
+    border: 0
+    border-top: 0.3em solid #E8E8E8
+    padding: 2em
+    margin-bottom: 0
+    font-size: 8pt
+
+  .nav-sidenav
+    width: 100%
+    height: auto
+    max-height: 100%
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
+      margin: 0
+
+  .affix-side .page-header
+    width: 100%
+
+  .intro .h2
+    margin-bottom: 1em
+    font-size: 1.5em
+
+  .skill-tree
+    width: 50vw
+    margin: 0 auto

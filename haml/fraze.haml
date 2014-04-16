@@ -1,0 +1,119 @@
+- $LOAD_PATH << '.'
+- require '_helpers'
+= render_file('layout/_wrap.haml')
+%body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
+  = render_file('layout/_menu.haml')
+  .jumbotron.small
+    .container
+      %h1
+        Základní anglické fráze<small>, anglická konverzace</small>
+          
+  .container.content
+    .row
+      .col-md-2
+        .hidden-print.hidden-xs.affix.affix-margin.affix-side{:role => "complementary", :"data-spy" => "affix", :"data-offset-top" => "138", :"data-offset-bottom" => "10"}
+          %h3.page-header
+            Kategorie
+          %ul.nav.nav-sidenav#nav-scrollpsy
+            %li
+              %a{:href => "#answer"}
+                Odpovědi
+            %li
+              %a{:href => "#contact"}
+                Seznamování se
+            %li
+              %a{:href => "#greeting"}
+                Pozdravy
+            %li
+              %a{:href => "#health"}
+                Zdraví
+            %li
+              %a{:href => "#hotel"}
+                V hotelu
+            %li
+              %a{:href => "#problem"}
+                V případě problému
+            %li
+              %a{:href => "#question"}
+                Otázky
+            %li
+              %a{:href => "#restaurant"}
+                V restauraci
+            %li
+              %a{:href => "#shopping"}
+                Nakupování
+            %li
+              %a{:href => "#travel"}
+                Cestování
+            %li
+              %a{:href => "#wish"}
+                Přání
+
+      .col-md-9.col-md-offset-1
+        %h2.page-header#answer
+          Odpovědi <small>(Answers)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th></tr><tr><td>Yes</td><td>Ano</td></tr><tr><td>No</td><td>Ne</td></tr><tr><td>I understand</td><td>Rozumím</td></tr><tr><td>I don't understand</td><td>Nerozumím</td></tr><tr><td>I don't know</td><td>Nevím</td></tr><tr><td>I agree</td><td>Souhlasím</td></tr><tr><td>Excellent/Great</td><td>Skvělé</td></tr><tr><td>A moment please</td><td>Moment prosím</td></tr><tr><td>I am 10 years old</td><td>Jsem o 10 let starší</td></tr><tr><td>I am from Czech Republic</td><td>Jsem z České republiky</td></tr><tr><td>I am studying</td><td>Jsem student</td></tr><tr><td>I work</td><td>Pracuji</td></tr><tr><td>I am sorry, I have to go</td><td>Je mi líto, ale musím už jít</td></tr><tr><td>I do not know</td><td>To nevím</td></tr><tr><td>It is near</td><td>Je to blízko</td></tr><tr><td>It is far</td><td>Je to daleko</td></tr><tr><td>It is small</td><td>Je to malé</td></tr><tr><td>It is big</td><td>Je to velké</td></tr><tr><td>It is important</td><td>Je to důležité</td></tr><tr><td>It is not bad</td><td>Není to špatné</td></tr><tr><td>Let's go</td><td>Pojďme</td></tr><tr><td>Never mind</td><td>Nevadí</td></tr><tr><td>No problem</td><td>To je v pořádku</td></tr><tr><td>That is a good idea</td><td>To je dobrý nápad</td></tr><tr><td>That is all right</td><td>V pořádku</td></tr><tr><td>No harm</td><td>Nic se nestalo</td></tr><tr><td>This is hot</td><td>Tohle je teplé</td></tr><tr><td>This is cold</td><td>Tohle je studené</td></tr><tr><td>You look wonderful!</td><td>Vypadáte skvěle!</td></tr><tr><td>Tom is not here right now</td><td>Tom tu dnes není</td></tr><tr><td>Be right back</td><td>Hned se vrátím</td></tr><tr><td>Good idea</td><td>Dobrý nápad</td></tr><tr><td>I am just joking</td><td>Dělám si legraci</td></tr><tr><td>I am shocked</td><td>Jsem šokován</td></tr><tr><td>I am terribly tired</td><td>Jsem velmi unaven</td></tr><tr><td>I am very sorry for you</td><td>Je mi velmi líto</td></tr><tr><td>It was a pleasure meeting you</td><td>Rád jsem vás poznal</td></tr><tr><td>Maybe later</td><td>Možná později</td></tr><tr><td>Very good</td><td>Velmi dobře</td></tr><tr><td>A little</td><td>Trochu</td></tr>
+
+        %h2.page-header#contact
+          Seznamování se <small>(Contact)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>How are you?</td><td>Jak se máte?</td></tr><tr><td>Fine, thank you</td><td>Dobře, děkuji</td></tr><tr><td>What is your name?</td><td>Jak se jmenujete?</td></tr><tr><td>My name is …</td><td>Jmenuji se …</td></tr><tr><td>Nice to meet you</td><td>Rád Vás poznávám</td></tr><tr><td>Please</td><td>Prosím</td></tr><tr><td>Thank you </td><td>Děkuji</td></tr><tr><td>You are welcome</td><td>Není zač</td></tr><tr><td>Excuse me</td><td>Promiňte</td></tr><tr><td>I am sorry</td><td>Omlouvám se</td></tr><tr><td>Have a good day</td><td>Pěkný den</td></tr><tr><td>He speaks English well</td><td>On mluví dobře anglicky</td></tr><tr><td>I will call you back tomorrow</td><td>Zavolám zítra</td></tr><tr><td>Nice to see you again</td><td>Rád Vás opět vidím</td></tr><tr><td>Nothing happened</td><td>Nic se nestalo</td></tr><tr><td>Please speak slower</td><td>Prosím mluvte pomaleji</td></tr><tr><td>Please wait a moment</td><td>Prosím počkejte chvilku</td></tr><tr><td>Thank you very much</td><td>Děkuji mnohokrát</td></tr><tr><td>Very kind of you</td><td>To je od Vás milé</td></tr>
+
+        %h2.page-header#greeting
+          Pozdravy <small>(Greeting)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Hello / Hi</td><td>Ahoj / Čau</td></tr><tr><td>Goodbye</td><td>Na shledanou</td></tr><tr><td>Good afternoon</td><td>Dobré odpoledne</td></tr><tr><td>Good day</td><td>Dobrý den</td></tr><tr><td>Good evening</td><td>Dobrý večer</td></tr><tr><td>Good morning</td><td>Dobré ráno</td></tr><tr><td>Good night</td><td>Dobrou noc</td></tr><tr><td>Good night and till tomorrow</td><td>Dobrou noc, zítra se uvidíme</td></tr><tr><td>Good. Thank you for asking</td><td>Dobře. Děkuji za optání</td></tr><tr><td>Not so bad</td><td>Není to špatné</td></tr><tr><td>Kind regards</td><td>S pozdravem</td></tr><tr><td>See you later</td><td>Uvidíme se později</td></tr><tr><td>See you soon</td><td>Brzy se uvidíme</td></tr><tr><td>See you tomorrow</td><td>Uvidíme se zítra</td></tr><tr><td>Have a nice trip!</td><td>Šťastnou cestu</td></tr><tr><td>See ya!</td><td>Uvidíme se</td></tr>
+
+        %h2.page-header#health
+          Zdraví <small>(Health)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>I am sick</td><td>Není mi dobře</td></tr><tr><td>I feel bad</td><td>Je mi špatně</td></tr><tr><td>I've been injured</td><td>Byl jsem zraněn</td></tr><tr><td>I need a doctor</td><td>Potřebuji doktora</td></tr><tr><td>I am allergic to …</td><td>Jsem alergický na …</td></tr><tr><td>I am ill</td><td>Jsem nemocný</td></tr><tr><td>I am injured</td><td>Jsem zraněný</td></tr><tr><td>I am allergic to this</td><td>Jsem na to alergický</td></tr>
+
+        %h2.page-header#hotel
+          V hotelu <small>(In a hotel)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Do you have any rooms available?</td><td>Máte volný pokoj?</td></tr><tr><td>How much is a room for one person?</td><td>Kolik stojí pokoj pro jednoho?</td></tr><tr><td>How much is a room for two people?</td><td>Kolik stojí pokoj pro dva?</td></tr><tr><td>I will stay for one night</td><td>Zůstanu na jednu noc</td></tr><tr><td>I will stay for two nights</td><td>Zůstanu na dvě noci</td></tr><tr><td>Is breakfast and supper included?</td><td>Je v ceně snídaně a večeře?</td></tr><tr><td>Can you wake me at seven o'clock?</td><td>Můžete mě vzbudit v sedm?</td></tr><tr><td>I want to check out</td><td>Chci se odhlásit</td></tr>
+
+        %h2.page-header#problem
+          V případě problému <small>(In case of problem)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Help!</td><td>Pomoc!</td></tr><tr><td>Leave me alone!</td><td>Nechte mě být!</td></tr><tr><td>Don't touch me!</td><td>Nesahejte na mě!</td></tr><tr><td>I'll call the police</td><td>Zavolám policii</td></tr><tr><td>Where is the police station?</td><td>Kde je policejní stanice?</td></tr><tr><td>Can you help me please?</td><td>Můžete mi prosím pomoci?</td></tr><tr><td>There's been an accident!</td><td>Stala se nehoda!</td></tr><tr><td>I need medical attention!</td><td>Potřebuji doktora!</td></tr><tr><td>I need a doctor!</td><td>Potřebuji doktora!</td></tr><tr><td>Call the police!</td><td>Zavolejte policii!</td></tr><tr><td>Go away!</td><td>Jděte pryč!</td></tr><tr><td>I've been raped!</td><td>Byla jsem znásilněna!</td></tr><tr><td>Look out!</td><td>Pozor!</td></tr><tr><td>I need help</td><td>Potřebuji pomoc</td></tr><tr><td>It's an emergency</td><td>Je to naléhavé</td></tr><tr><td>I am lost</td><td>Ztratil jsem se</td></tr><tr><td>I lost my bag</td><td>Ztratila jsem svůj batoh</td></tr><tr><td>I lost my wallet</td><td>Ztratil jsem svou peněženku</td></tr><tr><td>I haven't done anything wrong</td><td>Neudělal jsem nic špatného</td></tr><tr><td>Please, there has been a mistake</td><td>Stal se omyl</td></tr><tr><td>It was a misunderstanding</td><td>Bylo to nedorozumění</td></tr><tr><td>Where are you taking me?</td><td>Kam mě odvádíte?</td></tr><tr><td>Am I under arrest?</td><td>Jsem zatčen?</td></tr><tr><td>I confess</td><td>Přiznávám se</td></tr><tr><td>I want to talk to a lawyer</td><td>Chci mluvit s právníkem</td></tr><tr><td>Be careful</td><td>Buďte opatrný</td></tr><tr><td>Call a doctor</td><td>Zavolejte doktora</td></tr><tr><td>Call the police!</td><td>Zavolejte policii</td></tr><tr><td>Do not touch me!</td><td>Nesahejte na mě!</td></tr><tr><td>I am lost</td><td>Zabloudila jsem</td></tr><tr><td>I have lost my keys</td><td>Ztratil jsem klíče</td></tr><tr><td>I need help</td><td>Potřebuji pomoc</td></tr><tr><td>Leave me alone!</td><td>Nechte mě na pokoji!</td></tr><tr><td>Please help me</td><td>Prosím pomozte mi</td></tr><tr><td>Please hurry!</td><td>Prosím pospěšte</td></tr><tr><td>Someone stole my …</td><td>Někdo mi ukradl …</td></tr><tr><td>Watch out!</td><td>Pozor!</td></tr><tr><td>Please, write this</td><td>Prosím napište to</td></tr>
+
+        %h2.page-header#question
+          Otázky <small>(Questions)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Do you speak English?</td><td>Mluvíte anglicky?</td></tr><tr><td>Does anyone here speak English?</td><td>Mluví tu někdo anglicky?</td><tr><td>My Russian is bad</td><td>Neumím moc dobře rusky</td></tr></tr><tr><td>What does it mean?&nbsp;</td><td>Co to znamená?</td></tr><tr><td>Who are you?</td><td>Kdo jste?</td></tr><tr><td>What time is it?</td><td>Kolik je hodin?</td></tr><tr><td>Where is the toilet?</td><td>Kde je tu záchod?</td></tr><tr><td>Could you speak more slowly please?</td><td>Můžete prosím mluvit pomaleji?</td></tr><tr><td>Could you repeat it please?</td><td>Můžete to prosím zopakovat?</td></tr><tr><td>What?</td><td>Co?</td></tr><tr><td>Can I use your phone?</td><td>Mohu použít váš telefon?</td></tr><tr><td>Can I borrow your cell phone?</td><td>Mohu si půjčit váš mobil?</td></tr><tr><td>Are you all right?</td><td>Jsi v pořádku? Jsi ok?</td></tr><tr><td>Can you fix it?</td><td>Můžete to opravit?</td></tr><tr><td>Could I ask you something?</td><td>Mohu se Vás na něco zeptat?</td></tr><tr><td>Could you …?</td><td>Můžete …?</td></tr><tr><td>Could you help me, please?</td><td>Můžete mi pomoci?</td></tr><tr><td>Do you have …?</td><td>Máte …?</td></tr><tr><td>Does anyone here speak English?</td><td>Mluví tu někdo anglicky?</td></tr><tr><td>Excuse me, could I ask you something?</td><td>Promiňte, mohu se Vás na něco zeptat?</td></tr><tr><td>Excuse me, could you please help me?</td><td>Promiňte, můžete mi pomoci?</td></tr><tr><td>How can I help you, sir/madam?</td><td>Jak vám mohu pomoci pane/paní?</td></tr><tr><td>How can I help you?</td><td>Jak mohu pomoct?</td></tr><tr><td>I am looking for …</td><td>Hledám …</td></tr><tr><td>I beg your pardon?</td><td>Promiňte</td></tr><tr><td>May I …?</td><td>Mohu?</td></tr><tr><td>Really? You are not joking?</td><td>Opravdu?</td></tr><tr><td>What does that mean?</td><td>Co to znamená</td></tr><tr><td>What time is it?</td><td>Kolik je hodin?</td></tr><tr><td>Where can I change dollars?</td><td>Kde si mohu rozměnit dolary?</td></tr><tr><td>Where can I find …</td><td>Kde mohu najít …</td></tr><tr><td>Where is …?</td><td>Kde je …</td></tr><tr><td>Would you like …?</td><td>Chtěl byste …?</td></tr><tr><td>Are you already on summer/winter break?</td><td>Už máš letní/zimní prázdniny?</td></tr><tr><td>Can I have your address/phone number?</td><td>Můžete mi dát adresu/telefonní číslo?</td></tr><tr><td>What is this?</td><td>Co je to?</td></tr>
+
+        %h2.page-header#restaurant
+          V restauraci <small>(Restaurant)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>A table for one person/two people, please</td><td>Stůl pro jednu/dvě osoby, prosím</td></tr><tr><td>Can I look at the menu, please?</td><td>Mohu se podívat do menu?</td></tr><tr><td>I am a vegetarian</td><td>Jsem vegetarián</td></tr><tr><td>I don't eat pork</td><td>Nejím vepřové maso</td></tr><tr><td>I only eat kosher food</td><td>Jím pouze kosher jídlo</td></tr><tr><td>May I have a glass of …?</td><td>Mohu dostat skleničku …?</td></tr><tr><td>May I have a cup of …?</td><td>Mohu dostat hrneček …?</td></tr><tr><td>May I have a bottle of …?</td><td>Mohu dostat láhev …?</td></tr><tr><td>May I have some …?</td><td>Mohu dostat trochu …?</td></tr><tr><td>Excuse me, waiter?</td><td>Pane číšníku?</td></tr><tr><td>It was delicious</td><td>Bylo to vynikající</td></tr><tr><td>The check, please</td><td>Platíme prosím</td></tr><tr><td>Do you serve alcohol?</td><td>Naléváte alkohol</td></tr><tr><td>Is there table service?</td><td>Jsou stoly obsluhovány?</td></tr><tr><td>A beer/two beers, please</td><td>Jedno pivo/Dvě piva prosím</td></tr><tr><td>A glass of red/white wine</td><td>Skleničku červeného/bílého vína</td></tr><tr><td>One more, please</td><td>Ještě jednou prosím</td></tr><tr><td>A toast!</td><td>Na zdraví!</td></tr>
+
+        %h2.page-header#shopping
+          Nakupování <small>(Shopping)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Do you accept Canadian dollars?</td><td>Přijímáte Kanadské dollary?</td></tr><tr><td>Do you accept credit cards?</td><td>Přijímáte kreditní karty?</td></tr><tr><td>Can you change money for me?</td><td>Můžete mi rozměnit peníze?</td></tr><tr><td>What is the exchange rate?</td><td>Jaký je směnný kurz?</td></tr><tr><td>Where is an automatic teller machine (ATM)?</td><td>Kde je bankomat?</td></tr><tr><td>I need small change</td><td>Potřebuji drobné</td></tr><tr><td>I need big bills</td><td>Potřebuji velké bankovky</td></tr><tr><td>I need coins</td><td>Potřebuji mince</td></tr><tr><td>How much is this?</td><td>Kolik to stojí?</td></tr><tr><td>That's too expensive</td><td>To je moc drahé</td></tr><tr><td>I can't afford it</td><td>Nemohu si to dovolit</td></tr><tr><td>I don't want it</td><td>Nechci to</td></tr><tr><td>OK, I'll take it</td><td>Dobře, vezmu si to</td></tr><tr><td>Can I have a bag?</td><td>Mohu dostat tašku?</td></tr><tr><td>That is too expensive</td><td>To je příliš drahé</td></tr><tr><td>The store is open/closed</td><td>Otevřeno/Zavřeno</td></tr><tr><td>Push/Pull</td><td>Tahat/Tlačit</td></tr>
+
+        %h2.page-header#travel
+          Cestování <small>(Travel)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>How much is a ticket to …?</td><td>Kolik stojí jízdenka do …?</td></tr><tr><td>One ticket to …, please</td><td>Jízdenku do …, prosím</td></tr><tr><td>Where does this train go?</td><td>Kam jede tento vlak?</td></tr><tr><td>Does this bus stop in …?</td><td>Zastavuje tento autobus v …?</td></tr><tr><td>When does the train for … leave?</td><td>Kdy odjíždí vlak do …?</td></tr><tr><td>Take me to …, please</td><td>Odvezte mě do …., prosím</td></tr><tr><td>How much does it cost to get to …?</td><td>Kolik to stojí do …. ?</td></tr><tr><td>How do I get to …?</td><td>Jak se dostanu do …?</td></tr><tr><td>Can you show me on the map?</td><td>Můžete mi to ukázat na mapě?</td></tr><tr><td>I want to rent a car</td><td>Chci si pronajmout auto</td></tr><tr><td>The next stop is …</td><td>Další zastávka je …</td></tr>
+
+        %h2.page-header#wish
+          Přání <small>(Wish)</small>
+        .table-responsive
+          %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
+            <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Bon appetit!</td><td>Dobrou chuť</td></tr><tr><td>Good luck / Success</td><td>Hodně štěstí</td></tr><tr><td>Best wishes</td><td>Vše nejlepší</td></tr><tr><td>Congratulations on your birthday</td><td>Blahopřeji ti k narozeninám. </td></tr><tr><td>Happy holidays</td><td>Šťastné svátky</td></tr><tr><td>Happy New Year!</td><td>Šťastný nový rok!</td></tr><tr><td>Have a good trip</td><td>Štastnou cestu</td></tr><tr><td>Merry Christmas and a happy new year!</td><td>Veselé vánoce a šťastný nový rok</td></tr><tr><td>Merry Christmas!</td><td>Štastné a veselé vánoce</td></tr><tr><td>All the best</td><td>Vše nejlepší</td></tr><tr><td>Congratulations on your birthday!</td><td>Vše nejlepší k narozeninám!</td></tr><tr><td>Have a good trip</td><td>Šťastnou cestu</td></tr><tr><td>Have a nice holiday</td><td>Užij si prázdnin</td></tr><tr><td>Have fun</td><td>Hodně štěstí</td></tr>
+
+  = render_file('layout/_footer.haml')

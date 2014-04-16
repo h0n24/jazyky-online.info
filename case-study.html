@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Jan Šablatura">
+
+  <title>Případová studie - strukturální</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <style>
+    footer {
+      margin-top: 100px;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    .del {
+      text-decoration: line-through;
+    }
+    .del-zvazit, .del-zvazit * {
+      color: #9E487F;
+    }
+    .label-check {
+      background-color: #9E487F;
+    }
+    .merge-slovicka, .merge-slovicka * {
+      color: #0E83CD;
+    }
+    .del-odkazy, .del-odkazy * {
+      color: #CD4436;
+    }
+    .page-header {
+      padding-top: 2em;
+    }
+    .page-header:first-child {
+      padding-top: 1em;
+    }
+  </style>
+</head>
+<body>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Případová studie <small>strukturální</small></h1>
+    <dl class="dl-horizontal">
+      <dt>Pro stránku:</dt>
+      <dd><a href="http://jazyky-online.info/anglictina/index.php">http://jazyky-online.info/anglictina/index.php</a></dd>
+      <dt>Vypracoval:</dt>
+      <dd><a href="http://www.sablatura.info">Jan Šablatura</a></dd>
+      <dt>Datum:</dt>
+      <dd>13. 4. 2014</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-md-9" role="main">
+  
+<h2 id="l1" class="page-header">Původní sitemap stránky</h2>
+<pre>
+http://jazyky-online.info/anglictina/
+http://jazyky-online.info/anglictina/index.php
+http://jazyky-online.info/anglictina/gramatika.php
+http://jazyky-online.info/anglictina/frazova_slovesa.php
+http://jazyky-online.info/anglictina/nepravidelna_slovesa.php
+http://jazyky-online.info/anglictina/slovicka.php
+http://jazyky-online.info/anglictina/slovicka2.php
+http://jazyky-online.info/anglictina/obrazkovy-slovnik.php
+http://jazyky-online.info/anglictina/temata.php
+http://jazyky-online.info/anglictina/terminologie.php
+http://jazyky-online.info/anglictina/deti.php
+http://jazyky-online.info/anglictina/abeceda.php
+http://jazyky-online.info/anglictina/pro_zacatecniky.php
+http://jazyky-online.info/anglictina/business.php
+http://jazyky-online.info/anglictina/cv.php
+http://jazyky-online.info/anglictina/svet.php
+http://jazyky-online.info/anglictina/audio.php
+http://jazyky-online.info/anglictina/video.php
+http://jazyky-online.info/anglictina/ucebnice.php
+http://jazyky-online.info/anglictina/uceni_slovicek.php
+http://jazyky-online.info/anglictina/procvicovani.php
+http://jazyky-online.info/anglictina/flashcards.php
+http://jazyky-online.info/anglictina/vety.php
+http://jazyky-online.info/anglictina/hry.php
+http://jazyky-online.info/anglictina/testy.php
+http://jazyky-online.info/anglictina/konverzace.php
+http://jazyky-online.info/anglictina/fraze.php
+http://jazyky-online.info/anglictina/slovniky.php
+http://jazyky-online.info/anglictina/prekladac.php
+http://jazyky-online.info/anglictina/literatura.php
+http://jazyky-online.info/anglictina/prislovi.php
+http://jazyky-online.info/anglictina/maturita.php
+http://jazyky-online.info/anglictina/zkousky.php
+http://jazyky-online.info/anglictina/aplikace.php
+http://jazyky-online.info/anglictina/mobily.php
+http://jazyky-online.info/anglictina/cestovani.php
+http://jazyky-online.info/anglictina/content/abeceda.pdf
+http://jazyky-online.info/anglictina/content/podstatna_jmena.pdf
+http://jazyky-online.info/anglictina/content/pridavna_jmena.pdf
+http://jazyky-online.info/anglictina/content/cleny.pdf
+http://jazyky-online.info/anglictina/content/zajmena.pdf
+http://jazyky-online.info/anglictina/content/cislovky.pdf
+http://jazyky-online.info/anglictina/content/datum_cas.pdf
+http://jazyky-online.info/anglictina/content/slovesa.pdf
+http://jazyky-online.info/anglictina/content/prislovce.pdf
+http://jazyky-online.info/anglictina/content/predlozky.pdf
+http://jazyky-online.info/anglictina/content/spojky.pdf
+http://jazyky-online.info/anglictina/content/citoslovce.pdf
+http://jazyky-online.info/anglictina/content/am_uk.pdf
+http://jazyky-online.info/anglictina/content/zkousky.pdf
+http://jazyky-online.info/anglictina/content/zkousky2.pdf
+</pre>
+
+<h2 id="l2" class="page-header">Původní struktura + navrhované změny barevně</h2>
+<div class="well">
+<table width="750"><tbody><tr><td valign="top" style="line-height:1.5em;">
+<h4>Anglická gramatika</h4>
+<a href="http://jazyky-online.info/anglictina/gramatika.php">Anglická gramatika</a><br>
+<a href="http://jazyky-online.info/anglictina/frazova_slovesa.php">Frázová slovesa</a> <br>
+<a href="http://jazyky-online.info/anglictina/nepravidelna_slovesa.php">Nepravidelná slovesa</a><br>
+<h4>Slovíčka</h4>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/slovicka.php">Anglická slovíčka</a> <br>
+<a class="merge-slovicka del" href="http://jazyky-online.info/anglictina/slovicka2.php">Anglická slovíčka II</a> <br>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/obrazkovy-slovnik.php">Obrázkový slovník</a> <br>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/temata.php">Slovíčka podle témat</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/terminologie.php">Odborná terminologie</a> <br>
+<h4>Anglický jazyk</h4>
+<a class="del" href="http://jazyky-online.info/anglictina/deti.php">Angličtina pro děti</a> <br>
+<a class="del" href="http://jazyky-online.info/anglictina/abeceda.php">Anglická abeceda</a></a> <br>
+<a class="del-zvazit" href="http://jazyky-online.info/anglictina/pro_zacatecniky.php">Angličtina pro začátečníky</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/business.php">Business English</a> <br>
+<a class="del-zvazit" href="http://jazyky-online.info/anglictina/cv.php">Životopis v Angličtině</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/svet.php">Angličtina ve světě</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/audio.php">Audio</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/video.php">Video</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/ucebnice.php">Učebnice</a> <br>
+</td><td valign="top" style="line-height:1.5em;">
+<h4>Procvičování angličtiny</h4>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/uceni_slovicek.php">Učení slovíček</a> <br>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/procvicovani.php">Procvičování slovíček</a> <br>
+<a class="merge-slovicka" href="http://jazyky-online.info/anglictina/flashcards.php">Kartičky flashcards</a> <br>
+<a href="http://jazyky-online.info/anglictina/vety.php">Anglické věty</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/hry.php">Jazykové hry</a> <br>
+<a href="http://jazyky-online.info/anglictina/testy.php">Online testy</a> <br>
+<h4>Fráze a konverzace</h4>
+<a class="del" href="http://jazyky-online.info/anglictina/konverzace.php">Anglická konverzace</a> <br>
+<a href="http://jazyky-online.info/anglictina/fraze.php">Anglické fráze</a> <br>
+<h4>Slovníky</h4>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/slovniky.php">Anglický slovník</a> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/prekladac.php">Anglický překladač</a> <br>
+<h4>Další materiály</h4>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/literatura.php">Literatura</a> <br>
+<a href="http://jazyky-online.info/anglictina/prislovi.php">Anglická přísloví</a> <br>
+<a href="http://jazyky-online.info/anglictina/maturita.php">Maturitní otázky</a> <abbr title="matoucí odkaz">[?]</abbr> <br>
+<a class="del-odkazy" href="http://jazyky-online.info/anglictina/zkousky.php">Jazykové zkoušky</a> <abbr title="použít přiložené pdf jako obsah">[!]</abbr> <br>
+<a class="del-zvazit" href="http://jazyky-online.info/anglictina/aplikace.php">Jazykové aplikace</a> <br>
+<a href="http://jazyky-online.info/anglictina/mobily.php">Pro mobilní telefony</a> <br>
+<a class="del-zvazit" href="http://jazyky-online.info/anglictina/cestovani.php">Cestování</a><br>
+</td></tr></tbody></table>
+</div>
+<dl class="dl-horizontal pull-right">
+  <dt>Legenda:</dt>
+  <dd>
+    ok,
+    <strike>smazat</strike>,
+    <small class="label label-primary">merge</small>,
+    <small class="label label-danger">problém</small>,
+    <small class="label label-check">změnit</small>
+  </dd>
+</dl>
+
+<h2 id="l3" class="page-header">Stránky k opravě</h2>
+
+<h3>Stránky k odstranění <small class="del">(přeškrtnuté)</small></h3>
+<p>Duplikáty, nefunkční, zapomenuté či jinak zastaralé stránky. Důvod k odstranění je uveden níže.</p>
+<pre>
+http://jazyky-online.info/anglictina/deti.php
+ Důvod:
+    stránky jsou přehlednější na nové stránce http://jazyky-online.info/deti/index.php
+    zbytek jsou zastaralé, nebo duplikované informace
+
+http://jazyky-online.info/anglictina/abeceda.php
+  Důvod:
+    duplikát http://jazyky-online.info/anglictina/deti.php
+
+http://jazyky-online.info/anglictina/slovicka2.php
+  Důvod:
+    duplikát http://jazyky-online.info/anglictina/slovicka.php
+    najíždění myší je příliš komplikované
+
+http://jazyky-online.info/anglictina/konverzace.php
+  Důvod:
+    duplikáty http://jazyky-online.info/anglictina/fraze.php
+    zbytek slovíček přesunut do http://jazyky-online.info/anglictina/fraze.php
+</pre>
+
+<div class="del-odkazy">
+<h3>Stránky s odkazy, které tlačí Google rank dolů</h3>
+<p>Nefungující stránky, které je efektivnější odstranit, než je kompletně předělávat.</p>
+<pre>http://jazyky-online.info/anglictina/terminologie.php
+http://jazyky-online.info/anglictina/business.php
+http://jazyky-online.info/anglictina/svet.php
+http://jazyky-online.info/anglictina/audio.php
+http://jazyky-online.info/anglictina/video.php
+http://jazyky-online.info/anglictina/ucebnice.php
+http://jazyky-online.info/anglictina/hry.php
+http://jazyky-online.info/anglictina/slovniky.php
+http://jazyky-online.info/anglictina/prekladac.php
+http://jazyky-online.info/anglictina/literatura.php
+http://jazyky-online.info/anglictina/zkousky.php</pre>
+</div>
+
+<div class="del-zvazit">
+<h3>Stránky bez přidané informační hodnoty</h3>
+<p>Stránky, které je vhodné předělat. Důvody mohou být různé, kupříkladu příliš mnoho odkazů vedoucích na jiné stránky, špatná struktura, matoucí cesta apod. Důvod je uveden níže.</p>
+<pre>
+http://jazyky-online.info/anglictina/pro_zacatecniky.php
+  Důvod:
+    Nejasný smysl textu. Vhodné přeformulovat nebo odstranit.
+
+http://jazyky-online.info/anglictina/cv.php
+  Důvod:
+    Stránka s odkazy, která má velký potenciál. Vhodné přeformulovat (například poskytnout rady návštěvníkům) nebo odstranit.
+
+http://jazyky-online.info/anglictina/aplikace.php
+  Důvod:
+    Stránka není česky. Její přínos pro návštěvníky je sporný. Vhodnější smazat, než měnit.
+
+http://jazyky-online.info/anglictina/cestovani.php
+  Stránka, která má velký potenciál. Vhodné přeformátovat, odstranit
+
+</pre>
+</div>
+<h2 id="l4" class="page-header">Stránky k merge <small>(propojení v jednu)</small></h2>
+
+
+<div class="merge-slovicka">
+<h3>Nová stránka: slovíčka</h3>
+<p>Sdružuje:</p>
+<pre>
+http://jazyky-online.info/anglictina/slovicka.php
+http://jazyky-online.info/anglictina/slovicka2.php
+http://jazyky-online.info/anglictina/temata.php
+http://jazyky-online.info/anglictina/obrazkovy-slovnik.php
+http://jazyky-online.info/anglictina/uceni_slovicek.php
+http://jazyky-online.info/anglictina/procvicovani.php
+http://jazyky-online.info/anglictina/flashcards.php
+</pre>
+
+<h3>Návrh: rozcestník</h3>
+<p>Stránka s výběrem stylu učení, kombinující nejlepší vlastnosti předchozích stránek. Informace pro jednotlivé moduly předávány přes Ajax kvůli rychlosti.</p>
+<pre>
+Preferuji styl učení slovíček:
+
+1) rád se jenom koukám
+
+Obrázkové učení slovíček. 6s neustálé cyklení náhodných slovíček, dokud uživatel neklikne na tlačítko pro "zrychlení", jež identifikuje, že tohle slovo uživatel již zná (Jé, tohle slovo už znám!)
+-> kombinace:
+  http://www.jazyky-online.info/anglictina/uceni_slovicek.php
+  http://www.jazyky-online.info/anglictina/flashcards.php
+
+2) rád vybírám správné odpovědi
+-> přepracované: http://www.jazyky-online.info/anglictina/procvicovani.php
+
+3) nejraději čtu, mám rád seznamy
+  čistě seznam, scrapnutý ze všech slovíček co jsou
+</pre>
+</div>
+
+<h2 id="l5" class="page-header">Další nalezené problémy</h2>
+<ul>
+  <li>Opakující se kusy textu, které nenesou žádnou informaci. Kupříkladu "Odkaz na internetovou stránku"</li>
+</ul>
+
+<h2 id="l6" class="page-header">Nová navrhovaná struktura webu</h2>
+<h3>Tématicky</h3>
+
+<ul>
+  <li>index
+    <ul>
+      <li>gramatika
+        <ul>
+          <li>materiály ke stažení [pdf]</li>
+          <li>frázová slovesa</li>
+          <li>nepravidelná slovesa</li>
+        </ul>
+      </li>
+      <li>slovíčka</li>
+      <li>fráze</li>
+      <li>děti</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Podle schopností uživatele</h3>
+<ul>
+  <li>index
+    <ul>
+      <li>jsem začátečník</li>
+      <li>jsem pokročilý</li>
+      <li>jsem expert</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<div class="col-md-3" role="complementary" style="position:relative">
+<div class="hidden-print affix" role="complementary">
+<ul class="nav">
+
+<li class="active">
+  <a href="#l1">Původní sitemap</a>
+</li>
+<li>
+  <a href="#l2">Původní struktura</a>
+</li>
+<li>
+  <a href="#l3">Stránky k opravě</a>
+</li>
+<li>
+  <a href="#l4">Stránky k merge</a>
+</li>
+<li>
+  <a href="#l5">Další nalezené problémy</a>
+</li>
+<li>
+  <a href="#l6">Navrhovaná struktura</a>
+</li>
+
+
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+<footer>
+  <div class="container">
+  </div>
+</footer>
+</body>
+</html>

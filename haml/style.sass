@@ -1,5 +1,16 @@
 //@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-@import "fonts.css"
+//@import "fonts.css"
+
+
+@font-face
+  font-family: 'rockets'
+  src: url('fonts/rockets.eot')
+
+@font-face
+  font-family: 'rockets'
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype'), url(data:application/font-woff;charset=utf-8;base64,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) format('woff')
+  font-weight: normal
+  font-style: normal
 
 $primary-color: #0E83CD // anglická
 //$primary-color: #EEA303 // německá světlá
@@ -73,7 +84,6 @@ body
       background-position-y: 87%, 87%, 87%
       background-position-x: 0%, 100%, 0%
 
-
 ::selection
   background: rgba(0,0,0,.2) !important
   text-shadow: none
@@ -100,8 +110,10 @@ h4, .h4, h5, .h5, h6, .h6
   max-height: 80vh
   min-width: 163px
   width: 100%
-  overflow-y: scroll
+  overflow: auto
+  overflow-y: auto
   overflow-x: hidden
+
   &::-webkit-scrollbar
     margin-left: 2px
     height: .2em
@@ -170,6 +182,7 @@ h4, .h4, h5, .h5, h6, .h6
         border: none
         &:hover
           color: #fff !important
+          background: transparent
           box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.05) !important
 
 .intro .h2
@@ -250,6 +263,97 @@ h4, .h4, h5, .h5, h6, .h6
     font-size: 38pt
     font-weight: 100
 
+.hi-icon-wrap
+  text-align: center
+  margin: 0 auto
+  padding: 2em 0 3em
+
+.hi-icon
+  display: inline-block
+  font-size: 0px
+  cursor: pointer
+  margin: 15px 30px
+  width: 90px
+  height: 90px
+  border-radius: 50%
+  text-align: center
+  position: relative
+  z-index: 1
+  color: #fff
+
+.hi-icon:after
+  pointer-events: none
+  position: absolute
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  content: ''
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+
+.hi-icon:before
+  font-family: 'rockets'
+  speak: none
+  font-size: 48px
+  line-height: 90px
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  display: block
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.hi-icon-earth:before
+  content: "\e002"
+
+.hi-icon-effect-5 .hi-icon
+  box-shadow: 0 0 0 4px rgba(255,255,255,1)
+  overflow: hidden
+  -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s
+  -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s
+
+.hi-icon-effect-5 .hi-icon:after
+  display: none
+
+.no-touch .hi-icon-effect-5 .hi-icon:hover
+  background: rgba(255,255,255,1)
+  box-shadow: 0 0 0 8px rgba(255,255,255,0.3)
+
+.no-touch .hi-icon-effect-5a .hi-icon:hover:before
+  -webkit-animation: toRightFromLeft 0.3s forwards
+  -moz-animation: toRightFromLeft 0.3s forwards
+  animation: toRightFromLeft 0.3s forwards
+
+@-webkit-keyframes toRightFromLeft
+  49%
+    -webkit-transform: translate(100%)
+  50%
+    opacity: 0
+    -webkit-transform: translate(-100%)
+  51%
+    opacity: 1
+
+@-moz-keyframes toRightFromLeft
+  49%
+    -moz-transform: translate(100%)
+  50%
+    opacity: 0
+    -moz-transform: translate(-100%)
+  51%
+    opacity: 1
+
+@keyframes toRightFromLeft
+  49%
+    transform: translate(100%)
+  50%
+    opacity: 0
+    transform: translate(-100%)
+  51%
+    opacity: 1
+
 .stream-item-type
   position: absolute
   text-align: center
@@ -263,17 +367,28 @@ h4, .h4, h5, .h5, h6, .h6
   top: 0
   background-color: #fff
   &.rocket
-    background-image: url('img/iconmonstr-rocket-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('img/iconmonstr-rocket-icon.svg')
-    background-repeat: no-repeat
-    background-size: 7em 7em
-    background-position: 1.3em 1.3em
-    &.advanced
-      background-image: url('img/iconmonstr-rocket-8-icon-256.png') // fallback pro starší prohlížeče
-      background-image: none, url('img/iconmonstr-rocket-8-icon.svg')
-    &.profi
-      background-image: url('img/iconmonstr-rocket-11-icon-256.png') // fallback pro starší prohlížeče
-      background-image: none, url('img/iconmonstr-rocket-11-icon.svg')
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    font-family: 'rockets'
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    &:before
+      content: "\e600"
+      font-size: 7em
+      position: absolute
+      top: 0.175em
+      left: 0.175em
+    &.advanced:before
+      content: "\e602"
+      top: 0.2em
+    &.profi:before
+      content: "\e601"
+      top: 0.15em
+      left: 0.2em
 
 .stream-item-keywords
   border: 0.3em solid #E8E8E8
@@ -602,6 +717,8 @@ footer
   color: $primary-color !important
   box-shadow: 0 0 0 8px rgba($primary-color, 0.3) !important
 
+
+
 @media print
   .table-3-col
     td:nth-child(1),th:nth-child(1),td:nth-child(2),th:nth-child(2)
@@ -653,6 +770,19 @@ footer
     &:before
       font-size: 35px
       line-height: 68px
+
+  .stream-item-type.rocket
+    &:before
+      font-size: 2.2em
+      top: 0.2em
+      left: .6em
+    &.advanced:before
+      top: .3em
+    &.profi:before
+      font-size: 2.2em
+      top: 0.2em
+      left: .7em
+
   .ucim-se .btn
     margin-left: 14px !important
 

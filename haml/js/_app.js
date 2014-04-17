@@ -22,7 +22,7 @@ $("table.table-floathead").floatThead();
 
 
 try {
-var url = "vocabulary-simple.min.json"
+var url = "min/vocabulary-simple.min.json"
 $.ajax ({
     url: url,
     dataType: 'json',

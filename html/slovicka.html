@@ -32,7 +32,7 @@
         <span class='icon-bar'></span>
       </button>
       <div class='hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a'>
-        <a href="index.html" class="hi-icon hi-icon-earth navbar-brand" title="Jazyky-online.info / angličtina">jazyky-online</a>
+        <a href="index.html" class="hi-icon hi-icon-earth navbar-brand" data-toggle="tooltip" data-placement="bottom" title="jazyky online / angličtina">jazyky-online</a>
       </div>
       <!--
         <a class='navbar-brand' href='#'>
@@ -117,13 +117,13 @@ Anglická slovíčka<small>, slovní zásoba v angličtině</small>
 <div class='container content'>
 <div class='row'>
 <div class='col-md-2'>
-<div class='hidden-print affix affix-side affix-margin' data-offset-bottom='10' data-offset-top='188' data-spy='affix' role='complementary'>
+<div class='hidden-print affix-top affix-side affix-margin' data-offset-bottom='0' data-offset-top='188' data-spy='affix' role='complementary'>
 <h3 class='page-header'>
 Kategorie
 </h3>
-<ul class='nav nav-sidenav'>
+<ul class='nav nav-sidenav capitalize' id='set-slovicka'>
 <li class='active'>
-<a href='#'>
+<a data-category='abstract' href='#'>
 Abstract
 </a>
 </li>
@@ -366,10 +366,10 @@ Verb
 </div>
 </div>
 <div class='col-md-9 col-md-offset-1'>
-<h2 class='page-header'>
+<h2 class='page-header capitalize' id='scroll'>
 Abstract
 </h2>
-<table class='table table-striped table-4th-row table-condensed table-2-col'>
+<table class='table table-striped table-4th-row table-condensed table-2-col' id='get-slovicka'>
 <tr>
 <th>
 ability
@@ -978,7 +978,6 @@ množství
 </footer>
 <script src='http://code.jquery.com/jquery-2.1.0.js'></script>
 <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
-<script src='jquery.floatThead.min.js'></script>
 <script src='script.js'></script>
 
 </body>

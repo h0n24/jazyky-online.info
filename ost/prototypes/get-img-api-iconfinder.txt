@@ -1,0 +1,7 @@
+API
+
+iconfinder
+
+https://www.iconfinder.com/about/api
+
+api key: 721029e3bf574f11a0699931657adf68

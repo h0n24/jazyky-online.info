@@ -1,0 +1,30 @@
+<html>
+<body>
+<script src='http://code.jquery.com/jquery-2.1.0.js'></script>
+<script>
+$(document).ready(function(){
+
+var url = "vocabulary-simple.min.json"
+$.ajax ({
+    url: url,
+    dataType: 'json',
+    success: function (data) {
+        console.log("Načten json: "+url);
+        console.log(data);
+        localStorage.setItem('vocabulary', JSON.stringify(data));
+        var today = new Date();
+        localStorage.setItem('vocabulary-updated', JSON.stringify(today));
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        alert("chyba v jsonu: "+url+", stav: "+textStatus+", chybu háže: "+errorThrown);
+    }
+});
+
+var vocabulary = JSON.parse(localStorage.getItem('vocabulary'));
+console.log(vocabulary);
+
+});
+
+</script>
+</body>
+</html>

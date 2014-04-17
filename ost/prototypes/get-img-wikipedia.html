@@ -1,0 +1,40 @@
+<style>
+ img {
+  max-width: 200px;
+ }
+</style>
+
+
+<input type="text">
+<div id="search"></div>
+<div id="return">
+</div>
+<div id="result">
+</div>
+
+<script src='http://code.jquery.com/jquery-2.1.0.js'></script>
+<script>
+$('input').on('change',function() {
+  var input = encodeURIComponent($('input').val());
+  var search = "http://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch="+input+"&gsrlimit=10&gsroffset=0&prop=imageinfo&iiprop=url&format=json&callback=?";
+
+  $('#search').text(search);
+
+$.getJSON( search, function( data ) {
+  data = data.query.pages
+  console.log(data);
+  var items = [];
+  $.each( data, function( key, val ) {
+    val = val.imageinfo[0].url
+    console.log(val);
+    items.push( "<li id='" + key + "'><img src='" + val + "' /></li>" );
+  });
+  console.log(items);
+
+  $('#return').html( items );
+
+});
+  
+});
+
+</script>

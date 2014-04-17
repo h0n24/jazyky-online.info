@@ -1,8 +1,10 @@
-@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+//@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 @import "fonts.css"
 
 $primary-color: #0E83CD // anglická
-//$primary-color: #EEA303 // německá
+//$primary-color: #EEA303 // německá světlá
+//$primary-color: #D06503 // německá tmavá
+
 //$primary-color: #41AB6B // francouzská
 //$primary-color: #F06060 // španělština
 //$primary-color: #702FA8 // ruština
@@ -34,6 +36,9 @@ $primary-color-lighten: lighten($primary-color, 20%)
 body
   font-family: 'Open Sans', Calibri, Arial, sans-serif
   font-size: 14pt
+
+.capitalize, .capitalize *
+  text-transform: capitalize
 
 .page-header:before
   content: ""
@@ -126,7 +131,8 @@ h4, .h4, h5, .h5, h6, .h6
     border-right: 2px solid #fff
 
 .affix-side
-  top: 2em
+  &.affix
+    top: 2em
   & .page-header
     min-width: 165px // nezapomínat na margin +2 !
     width: 100%
@@ -155,8 +161,10 @@ h4, .h4, h5, .h5, h6, .h6
       margin-top: 7em
     .hi-icon-wrap
       left: 50%
-      margin-left: -75px
+      margin-left: -40px
       margin-top: 1em
+      &:hover:after
+        display: none !important
       .hi-icon
         background: transparent
         border: none
@@ -547,6 +555,7 @@ footer
 
 .hi-icon
   padding: 0
+  margin: 0
 
 .hi-icon-wrap
   margin: 0
@@ -565,6 +574,29 @@ footer
   border: 2px solid $primary-color
   box-shadow: 0 0 0 4px #fff
   color: #fff
+  z-index: 2
+
+.hi-icon-wrap:hover:after
+  content: "←  zpět na hlavní stránku"
+  position: fixed
+  display: block
+  top: 0
+  width: 30em
+  height: 50px
+  background: #fff
+  padding-left: 110px
+  margin: 0
+  font-size: 10pt
+  text-align: left
+  line-height: 50px
+  z-index: 1
+
+.hi-icon-wrap:hover:after:hover
+  background: red
+
+.hi-icon-wrap:after:hover
+  background: blue
+
 
 .hi-icon-effect-5 .hi-icon:hover
   color: $primary-color !important

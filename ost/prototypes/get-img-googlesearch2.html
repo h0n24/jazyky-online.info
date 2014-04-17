@@ -1,0 +1,44 @@
+<style>
+ img {
+  max-width: 500px;
+ }
+</style>
+
+
+<input type="text">
+<div id="search"></div>
+<div id="return">
+</div>
+<div id="result">
+</div>
+
+<script src='http://code.jquery.com/jquery-2.1.0.js'></script>
+<script>
+
+var global;
+$('input').on('change',function() {
+  var input = encodeURIComponent($('input').val());
+  var search = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+input+"&callback=?";
+
+  $('#search').text(search);
+
+$.getJSON( search, function( data ) {
+  var data = data.responseData.results;
+  console.log(data)
+  var items = [];
+  $.each( data, function( key, val ) {
+    url = val.unescapedUrl
+    text = val.contentNoFormatting
+
+    console.log(val);
+    items.push( "<li id='" + key + "'><img src='" + url + "' alt='"+text +"' /></li>" );
+  });
+  console.log(items);
+
+  $('#return').html( items );
+
+});
+  
+});
+
+</script>

@@ -1,0 +1,178 @@
+<html>
+<head>
+<style>
+ img {
+  max-height: 16em;
+  vertical-align: bottom;
+ }
+ .box {
+  position: relative;
+ }
+ .box .img {
+  height: 16em;
+  margin-bottom: 2em;
+ }
+ .box h2 {
+  color: #999;
+ }
+ #actual, #coming {
+  background-color: #fff;
+  top: 2em;
+  left: 2em;
+  position: absolute;
+  min-width: 50%;
+ }
+ #coming {
+  top: -800px;
+  left: -800px;
+ }
+ #next {
+  top: 4em;
+  right: 2em;
+  position: absolute;
+ }
+ #stats {
+  top: 6em;
+  right: 2em;
+  position: absolute;
+ }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <div id="coming">
+      <div class="img"></div>
+      <h1></h1>
+      <h2></h2>
+  </div>
+  <div id="actual">
+  </div>
+  <br clear="all">
+</div>
+
+
+<button id="next">Jé, tohle slovo už znám!</button>
+<div id="stats">
+
+</div>
+
+<div class="wrapper">
+  <div class="pie spinner"></div>
+  <div class="pie filler"></div>
+  <div class="mask"></div>
+</div>
+
+<script src='http://code.jquery.com/jquery-2.1.0.js'></script>
+<script>
+var timer = 3;
+var count_items = 0;
+var count_learned = 0;
+var items = [];
+ items["en"] = [];
+ items["cz"] = [];
+var learned = [];
+ learned["en"] = [];
+ learned["cz"] = [];
+var english;
+var czech;
+var english_old;
+var czech_old;
+var myTimer;
+var addStyle = ".wrapper{position:fixed;top:2em;right:2em;background:#FFF;margin:0 0 auto auto;width:1em;height:1em}.wrapper,.wrapper *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.wrapper .pie{width:50%;height:100%;transform-origin:100% 50%;position:absolute;background:#08c;border:3px solid rgba(0,0,0,.5)}.wrapper .spinner{border-radius:100% 0 0 100% / 50% 0 0 50%;z-index:200;border-right:none;-webkit-animation:rota "+timer+"s linear infinite}.wrapper:hover .filler,.wrapper:hover .mask,.wrapper:hover .spinner{-webkit-animation-play-state:running}.wrapper .filler{border-radius:0 100% 100% 0 / 0 50% 50% 0;left:50%;opacity:0;z-index:100;-webkit-animation:opa "+timer+"s steps(1,end) infinite reverse;border-left:none}.wrapper .mask{width:50%;height:100%;position:absolute;background:inherit;opacity:1;z-index:300;-webkit-animation:opa "+timer+"s steps(1,end) infinite}@-webkit-keyframes rota{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes opa{0%{opacity:1}100%,50%{opacity:0}}";
+
+
+function getImg(input) {
+    var input = encodeURIComponent(input);
+    var search = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+input+"&callback=?";
+
+  $.getJSON( search, function( data ) {
+    var data = data.responseData.results;
+    var i = 0;
+    var j = Math.random() * 4;
+    j = Math.ceil(j);
+    $.each( data, function( key, val ) {
+      i++;
+      url = val.unescapedUrl
+      text = val.contentNoFormatting
+
+      var img = $("<img/>").on("load",function() { return false; })
+          .on("error", function() { return; })
+          .attr("src", url).attr("alt",text).attr("onerror","this.style.display=\"none\"");
+
+      $('#coming .img').html(img);
+      
+    });
+
+  });
+}
+
+function doStuff() {
+  random = Math.random();
+  random = random * count_items;
+  random = Math.ceil(random);
+  english_old = english;
+  czech_old = czech;
+  english = items.en[random];
+  czech = items.cz[random];
+  czech = czech.toString().replace(",",", ");
+
+  $("#actual").html($("#coming").html());
+  
+  $("#coming h1").html(english);
+  $("#coming h2").html(czech);
+  
+  var all = english + ", " + czech;
+  console.log(all);
+
+  getImg(english);
+}
+
+$.getJSON("vocabulary-simple.json", function(data) {
+  console.log(data);
+
+  $.each( data.color, function( key, val ) {
+    //console.log(val);
+    count_items++;
+    items["en"][count_items] = key;
+    items["cz"][count_items] = val;
+    
+  });
+  $("#stats").html("Slovíček: " + count_items + ", naučeno: " +count_learned);
+
+  myTimer = setInterval(doStuff, timer*1000);
+  doStuff();
+
+  $("head").append("<style>"+addStyle+"</style>");
+
+  $("#next").on("click",function () {
+    clearInterval(myTimer);
+    myTimer = setInterval(doStuff, timer*1000);
+
+    console.log(czech_old + " " + english_old);
+
+    var index = items["en"].indexOf(english_old);
+
+    if (index > -1) {
+      items["en"].splice(index, 1);
+      items["cz"].splice(index, 1);
+      count_items--;
+      count_learned++;
+      $("#stats").html("Slovíček: " + count_items + ", naučeno: " +count_learned);
+    }
+
+    if(count_items == 0) {
+      $("#coming").html("");
+      $("#actual").html("Naučena všechna slovíčka! :)");
+    }
+
+
+
+    doStuff();
+  });
+
+});
+</script>
+
+</body>
+</html>

@@ -11,12 +11,12 @@
   .container.content
     .row
       .col-md-2
-        .hidden-print.affix.affix-side.affix-margin{:role => "complementary", :"data-spy" => "affix", :"data-offset-top" => "188", :"data-offset-bottom" => "10"}
+        .hidden-print.affix-top.affix-side.affix-margin{:role => "complementary", :"data-spy" => "affix", :"data-offset-top" => "188", :"data-offset-bottom" => "0"}
           %h3.page-header
             Kategorie
-          %ul.nav.nav-sidenav
+          %ul.nav.nav-sidenav.capitalize#set-slovicka
             %li.active
-              %a{:href => "#"}
+              %a{:href => "#", :"data-category" => "abstract"}
                 Abstract
             %li
               %a{:href => "#"}
@@ -160,9 +160,9 @@
               %a{:href => "#"}
                 Verb
       .col-md-9.col-md-offset-1
-        %h2.page-header
+        %h2.page-header.capitalize#scroll
           Abstract
-        %table.table.table-striped.table-4th-row.table-condensed.table-2-col
+        %table.table.table-striped.table-4th-row.table-condensed.table-2-col#get-slovicka
           %tr
             %th
               ability

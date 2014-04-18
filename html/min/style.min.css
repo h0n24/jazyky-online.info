@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "rockets";
-  src: url("min/rockets.eot");
+  src: url("../img/rockets.eot");
 }
 @font-face {
   font-family: "rockets";
@@ -259,25 +259,25 @@ h4, .h4, h5, .h5, h6, .h6 {
   background-repeat: no-repeat;
 }
 .intro-flags.en {
-  background-image: url("img/flags/en.png");
+  background-image: url("../img/flags/en.png");
 }
 .intro-flags.de {
-  background-image: url("img/flags/de.png");
+  background-image: url("../img/flags/de.png");
 }
 .intro-flags.fr {
-  background-image: url("img/flags/fr.png");
+  background-image: url("../img/flags/fr.png");
 }
 .intro-flags.es {
-  background-image: url("img/flags/es.png");
+  background-image: url("../img/flags/es.png");
 }
 .intro-flags.ru {
-  background-image: url("img/flags/ru.png");
+  background-image: url("../img/flags/ru.png");
 }
 .intro-flags.cn {
-  background-image: url("img/flags/cn.png");
+  background-image: url("../img/flags/cn.png");
 }
 .intro-flags.jp {
-  background-image: url("img/flags/jp.png");
+  background-image: url("../img/flags/jp.png");
 }
 
 .jumbotron.small {
@@ -313,7 +313,6 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 .stream-item h2 {
   margin-bottom: 1em;
-  margin-left: -0.5em;
   color: #e8e8e8;
   font-size: 38pt;
   font-weight: 100;
@@ -526,7 +525,7 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 7em;
   float: left;
   background: white;
-  background-image: url("img/icons.png");
+  background-image: url("../img/icons.png");
   background-repeat: no-repeat;
   background-position: 24px 28px;
   transition: all 0.3s ease-in;
@@ -662,104 +661,104 @@ h4, .h4, h5, .h5, h6, .h6 {
   border: 1px solid transparent;
 }
 .skill-tree.old .skill.matematika {
-  background-image: url("img/iconmonstr-calculator-6-icon-256.png");
-  background-image: none, url("img/iconmonstr-calculator-6-icon.svg");
+  background-image: url("../img/iconmonstr-calculator-6-icon-256.png");
+  background-image: none, url("../img/iconmonstr-calculator-6-icon.svg");
 }
 .skill-tree.old .skill.cisla {
-  background-image: url("img/iconmonstr-sort-22-icon-256.png");
-  background-image: none, url("img/iconmonstr-sort-22-icon.svg");
+  background-image: url("../img/iconmonstr-sort-22-icon-256.png");
+  background-image: none, url("../img/iconmonstr-sort-22-icon.svg");
 }
 .skill-tree.old .skill.latky {
-  background-image: url("img/iconmonstr-flask-5-icon-256.png");
-  background-image: none, url("img/iconmonstr-flask-5-icon.svg");
+  background-image: url("../img/iconmonstr-flask-5-icon-256.png");
+  background-image: none, url("../img/iconmonstr-flask-5-icon.svg");
 }
 .skill-tree.old .skill.zemepis {
-  background-image: url("img/iconmonstr-anchor-4-icon-256.png");
-  background-image: none, url("img/iconmonstr-anchor-4-icon.svg");
+  background-image: url("../img/iconmonstr-anchor-4-icon-256.png");
+  background-image: none, url("../img/iconmonstr-anchor-4-icon.svg");
 }
 .skill-tree.old .skill.dum {
-  background-image: url("img/iconmonstr-christmas-house-icon-256.png");
-  background-image: none, url("img/iconmonstr-christmas-house-icon.svg");
+  background-image: url("../img/iconmonstr-christmas-house-icon-256.png");
+  background-image: none, url("../img/iconmonstr-christmas-house-icon.svg");
 }
 .skill-tree.old .skill.napoje {
-  background-image: url("img/iconmonstr-coffee-8-icon-256.png");
-  background-image: none, url("img/iconmonstr-coffee-8-icon.svg");
+  background-image: url("../img/iconmonstr-coffee-8-icon-256.png");
+  background-image: none, url("../img/iconmonstr-coffee-8-icon.svg");
 }
 .skill-tree.old .skill.nadoby {
-  background-image: url("img/iconmonstr-beer-10-icon-256.png");
-  background-image: none, url("img/iconmonstr-beer-10-icon.svg");
+  background-image: url("../img/iconmonstr-beer-10-icon-256.png");
+  background-image: none, url("../img/iconmonstr-beer-10-icon.svg");
 }
 .skill-tree.old .skill.barvy {
-  background-image: url("img/iconmonstr-magic-3-icon-256.png");
-  background-image: none, url("img/iconmonstr-magic-3-icon.svg");
+  background-image: url("../img/iconmonstr-magic-3-icon-256.png");
+  background-image: none, url("../img/iconmonstr-magic-3-icon.svg");
 }
 .skill-tree.old .skill.rodina {
-  background-image: url("img/iconmonstr-favorite-3-icon-256.png");
-  background-image: none, url("img/iconmonstr-favorite-3-icon.svg");
+  background-image: url("../img/iconmonstr-favorite-3-icon-256.png");
+  background-image: none, url("../img/iconmonstr-favorite-3-icon.svg");
 }
 .skill-tree.old .skill.telo {
-  background-image: url("img/iconmonstr-user-2-icon-256.png");
-  background-image: none, url("img/iconmonstr-user-2-icon.svg");
+  background-image: url("../img/iconmonstr-user-2-icon-256.png");
+  background-image: none, url("../img/iconmonstr-user-2-icon.svg");
 }
 .skill-tree.old .skill.jidlo {
-  background-image: url("img/iconmonstr-christmas-gingerbread-3-icon-256.png");
-  background-image: none, url("img/iconmonstr-christmas-gingerbread-3-icon.svg");
+  background-image: url("../img/iconmonstr-christmas-gingerbread-3-icon-256.png");
+  background-image: none, url("../img/iconmonstr-christmas-gingerbread-3-icon.svg");
 }
 .skill-tree.old .skill.ovoce {
-  background-image: url("img/iconmonstr-apple-os-icon-256.png");
-  background-image: none, url("img/iconmonstr-apple-os-icon.svg");
+  background-image: url("../img/iconmonstr-apple-os-icon-256.png");
+  background-image: none, url("../img/iconmonstr-apple-os-icon.svg");
 }
 .skill-tree.old .skill.zelenina {
-  background-image: url("img/iconmonstr-pen-12-icon-256.png");
-  background-image: none, url("img/iconmonstr-pen-12-icon.svg");
+  background-image: url("../img/iconmonstr-pen-12-icon-256.png");
+  background-image: none, url("../img/iconmonstr-pen-12-icon.svg");
 }
 .skill-tree.old .skill.mesto {
-  background-image: url("img/iconmonstr-shop-icon-256.png");
-  background-image: none, url("img/iconmonstr-shop-icon.svg");
+  background-image: url("../img/iconmonstr-shop-icon-256.png");
+  background-image: none, url("../img/iconmonstr-shop-icon.svg");
 }
 .skill-tree.old .skill.zvirata {
-  background-image: url("img/iconmonstr-christmas-reindeer-icon-256.png");
-  background-image: none, url("img/iconmonstr-christmas-reindeer-icon.svg");
+  background-image: url("../img/iconmonstr-christmas-reindeer-icon-256.png");
+  background-image: none, url("../img/iconmonstr-christmas-reindeer-icon.svg");
 }
 .skill-tree.old .skill.priroda {
-  background-image: url("img/iconmonstr-brightness-3-icon-256.png");
-  background-image: none, url("img/iconmonstr-brightness-3-icon.svg");
+  background-image: url("../img/iconmonstr-brightness-3-icon-256.png");
+  background-image: none, url("../img/iconmonstr-brightness-3-icon.svg");
 }
 .skill-tree.old .skill.obleceni {
-  background-image: url("img/iconmonstr-christmas-hat-icon-256.png");
-  background-image: none, url("img/iconmonstr-christmas-hat-icon.svg");
+  background-image: url("../img/iconmonstr-christmas-hat-icon-256.png");
+  background-image: none, url("../img/iconmonstr-christmas-hat-icon.svg");
 }
 .skill-tree.old .skill.stroje {
-  background-image: url("img/iconmonstr-wrench-5-icon-256.png");
-  background-image: none, url("img/iconmonstr-wrench-5-icon.svg");
+  background-image: url("../img/iconmonstr-wrench-5-icon-256.png");
+  background-image: none, url("../img/iconmonstr-wrench-5-icon.svg");
 }
 .skill-tree.old .skill.nabytek {
-  background-image: url("img/iconmonstr-3d-view-icon-256.png");
-  background-image: none, url("img/iconmonstr-3d-view-icon.svg");
+  background-image: url("../img/iconmonstr-3d-view-icon-256.png");
+  background-image: none, url("../img/iconmonstr-3d-view-icon.svg");
 }
 .skill-tree.old .skill.doprava {
-  background-image: url("img/iconmonstr-direction-7-icon-256.png");
-  background-image: none, url("img/iconmonstr-direction-7-icon.svg");
+  background-image: url("../img/iconmonstr-direction-7-icon-256.png");
+  background-image: none, url("../img/iconmonstr-direction-7-icon.svg");
 }
 .skill-tree.old .skill.povolani {
-  background-image: url("img/iconmonstr-briefcase-4-icon-256.png");
-  background-image: none, url("img/iconmonstr-briefcase-4-icon.svg");
+  background-image: url("../img/iconmonstr-briefcase-4-icon-256.png");
+  background-image: none, url("../img/iconmonstr-briefcase-4-icon.svg");
 }
 .skill-tree.old .skill.cas {
-  background-image: url("img/iconmonstr-time-10-icon-256.png");
-  background-image: none, url("img/iconmonstr-time-10-icon.svg");
+  background-image: url("../img/iconmonstr-time-10-icon-256.png");
+  background-image: none, url("../img/iconmonstr-time-10-icon.svg");
 }
 .skill-tree.old .skill.pridavna-jmena {
-  background-image: url("img/iconmonstr-copy-icon-256.png");
-  background-image: none, url("img/iconmonstr-copy-icon.svg");
+  background-image: url("../img/iconmonstr-copy-icon-256.png");
+  background-image: none, url("../img/iconmonstr-copy-icon.svg");
 }
 .skill-tree.old .skill.slovesa {
-  background-image: url("img/iconmonstr-copy-2-icon-256.png");
-  background-image: none, url("img/iconmonstr-copy-2-icon.svg");
+  background-image: url("../img/iconmonstr-copy-2-icon-256.png");
+  background-image: none, url("../img/iconmonstr-copy-2-icon.svg");
 }
 .skill-tree.old .skill.zajmena {
-  background-image: url("img/iconmonstr-copy-3-icon-256.png");
-  background-image: none, url("img/iconmonstr-copy-3-icon.svg");
+  background-image: url("../img/iconmonstr-copy-3-icon-256.png");
+  background-image: none, url("../img/iconmonstr-copy-3-icon.svg");
 }
 
 .table-4th-row tr:nth-child(4n) td:last-child {

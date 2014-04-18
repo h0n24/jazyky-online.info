@@ -9,120 +9,134 @@
   = render :menu, :page_type => "other", :h1_big => "Učení se anglických slovíček", :h1_small => ""
           
   .container.content
-    %ul.skill-tree.old
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.barvy
-            %a{:href => "#"}
-              .skill-label
-                Barvy
-          %li.skill.rodina
-            %a{:href => "#"}
-              .skill-label
-                Rodina
-          %li.skill.telo
-            %a{:href => "#"}
-              .skill-label
-                Tělo 
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.jidlo
-            %a{:href => "#"}
-              .skill-label
-                Jídlo
-          %li.skill.ovoce
-            %a{:href => "#"}
-              .skill-label
-                Ovoce
-          %li.skill.zelenina
-            %a{:href => "#"}
-              .skill-label
-                Zelenina
-          %li.skill.napoje
-            %a{:href => "#"}
-              .skill-label
-                Nápoje
+    .row
+      .col-md-2
+        Celkový počet slovíček v databázi: 1611
+        %br
+        Z toho už umím: 540
+        %br
+        %br
+        Dokážu rozumět 40% odborného textu
+        %br
+        50% beletrie
+        %br
+        A chápu 70% mluvené řeči
+      .col-md-9.col-md-offset-1
+        %ul.skill-tree.old
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.barvy
+                %a{:href => "#"}
+                  .skill-label
+                    Barvy
+              %li.skill.rodina
+                %a{:href => "#"}
+                  .skill-label
+                    Rodina
+              %li.skill.telo
+                %a{:href => "#"}
+                  .skill-label
+                    Tělo 
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.jidlo
+                %a{:href => "#"}
+                  .skill-label
+                    Jídlo
+              %li.skill.ovoce
+                %a{:href => "#"}
+                  .skill-label
+                    Ovoce
+              %li.skill.zelenina
+                %a{:href => "#"}
+                  .skill-label
+                    Zelenina
+              %li.skill.napoje
+                %a{:href => "#"}
+                  .skill-label
+                    Nápoje
 
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.mesto
-            %a{:href => "#"}
-              .skill-label
-                Město
-          %li.skill.zvirata
-            %a{:href => "#"}
-              .skill-label
-                Zvířata
-          %li.skill.priroda
-            %a{:href => "#"}
-              .skill-label
-                Příroda
-          %li.skill.obleceni
-            %a{:href => "#"}
-              .skill-label
-                Oblečení
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.nadoby
-            %a{:href => "#"}
-              .skill-label
-                Nádoby
-          %li.skill.stroje
-            %a{:href => "#"}
-              .skill-label
-                Stroje
-          %li.skill.dum
-            %a{:href => "#"}
-              .skill-label
-                Dům
-          %li.skill.nabytek
-            %a{:href => "#"}
-              .skill-label
-                Nábytek
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.doprava
-            %a{:href => "#"}
-              .skill-label
-                Doprava
-          %li.skill.zemepis
-            %a{:href => "#"}
-              .skill-label
-                Zeměpis
-          %li.skill.latky
-            %a{:href => "#"}
-              .skill-label
-                Látky
-          %li.skill.matematika
-            %a{:href => "#"}
-              .skill-label
-                Matematika
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.povolani
-            %a{:href => "#"}
-              .skill-label
-                Povolání
-          %li.skill.cas
-            %a{:href => "#"}
-              .skill-label
-                Čas
-          %li.skill.cisla
-            %a{:href => "#"}
-              .skill-label
-                Čísla
-      %li.skill-tree-row
-        %ul.skills
-          %li.skill.pridavna-jmena
-            %a{:href => "#"}
-              .skill-label
-                Přídavná jména
-          %li.skill.slovesa
-            %a{:href => "#"}
-              .skill-label
-                Slovesa
-          %li.skill.zajmena
-            %a{:href => "#"}
-              .skill-label
-                Zájmena
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.mesto
+                %a{:href => "#"}
+                  .skill-label
+                    Město
+              %li.skill.zvirata
+                %a{:href => "#"}
+                  .skill-label
+                    Zvířata
+              %li.skill.priroda
+                %a{:href => "#"}
+                  .skill-label
+                    Příroda
+              %li.skill.obleceni
+                %a{:href => "#"}
+                  .skill-label
+                    Oblečení
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.nadoby
+                %a{:href => "#"}
+                  .skill-label
+                    Nádoby
+              %li.skill.stroje
+                %a{:href => "#"}
+                  .skill-label
+                    Stroje
+              %li.skill.dum
+                %a{:href => "#"}
+                  .skill-label
+                    Dům
+              %li.skill.nabytek
+                %a{:href => "#"}
+                  .skill-label
+                    Nábytek
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.doprava
+                %a{:href => "#"}
+                  .skill-label
+                    Doprava
+              %li.skill.zemepis
+                %a{:href => "#"}
+                  .skill-label
+                    Zeměpis
+              %li.skill.latky
+                %a{:href => "#"}
+                  .skill-label
+                    Látky
+              %li.skill.matematika
+                %a{:href => "#"}
+                  .skill-label
+                    Matematika
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.povolani
+                %a{:href => "#"}
+                  .skill-label
+                    Povolání
+              %li.skill.cas
+                %a{:href => "#"}
+                  .skill-label
+                    Čas
+              %li.skill.cisla
+                %a{:href => "#"}
+                  .skill-label
+                    Čísla
+          %li.skill-tree-row
+            %ul.skills
+              %li.skill.pridavna-jmena
+                %a{:href => "#"}
+                  .skill-label
+                    Přídavná jména
+              %li.skill.slovesa
+                %a{:href => "#"}
+                  .skill-label
+                    Slovesa
+              %li.skill.zajmena
+                %a{:href => "#"}
+                  .skill-label
+                    Zájmena
+                    
   = render :footer, :text_footer => $text_footer

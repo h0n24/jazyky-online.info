@@ -33,7 +33,7 @@
             %span.ucim-se-label.sr-hidden
               Právě se učím
             .btn-group
-              %button.btn.btn-default.dropdown-toggle{:type => "button", :"data-toggle" => "dropdown"}
+              %button.btn.btn-primary.dropdown-toggle{:type => "button", :"data-toggle" => "dropdown"}
                 angličtinu
                 %span.caret
               %ul.dropdown-menu{:role => "menu"}
@@ -64,3 +64,17 @@
     .container
       %h1
         #{h1_big}<small>#{h1_small}</small>
+
+%div{:class => "modal fade", :id => "hlaska_po_blokaci", :tabindex => "-1", :role => "dialog", :"aria-labelledby" => "myModalLabel", :"aria-hidden" => "true"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Nemáš rád reklamy?</h4>
+      .modal-body
+        %p
+          Škoda, že tato stránka by bez reklam nefungovala a nemohla by tak pomáhat ostatním učit se jazyky. To by nás mrzelo :(
+        %p
+          Prosím na této stránce AdBlock či jiné programy blokující reklamu nepoužívejte.
+      .modal-footer
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Budu se řídit kodexem cti</button>

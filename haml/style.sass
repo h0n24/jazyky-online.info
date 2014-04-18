@@ -36,15 +36,27 @@ $primary-color-lighten: lighten($primary-color, 20%)
   line-height: 1.42857143
 .ucim-se .btn
   margin-top: -4px
-  border: 1px solid $primary-color
   font-size: 10pt
-  background-image: none
-  background-color: #fff
-  color: $primary-color
+
 // barvy
 body
   font-family: 'Open Sans', Calibri, Arial, sans-serif
   font-size: 14pt
+
+.modal-content
+  font-size: 11pt
+
+.btn-primary
+  border: 1px solid $primary-color
+  background-image: none
+  background-color: #FFF
+  color: $primary-color
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary
+  border-color: $primary-color-darken
+  background-image: none
+  background-color: #FFF
+  color: $primary-color-darken
 
 .capitalize, .capitalize *
   text-transform: capitalize
@@ -55,16 +67,20 @@ body
   padding-top: 40px
   display: block
 
+.adsense
+  overflow: hidden
+
+.adsense ins
+  margin-top: 2em
+  margin-bottom: 2em
+
 .navbar a
   color: $primary-color
 
 .container.content
-  .btn,.btn:hover
+  a.btn,a.btn:hover
     background: none
-  .btn
-    border: 1px solid $primary-color
-    &:hover
-      border-color: $primary-color-darken
+    color: inherit
   a
     color: $primary-color
     background: -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient(#FFF, #FFF), -webkit-linear-gradient($primary-color, $primary-color)
@@ -238,7 +254,7 @@ h4, .h4, h5, .h5, h6, .h6
   list-style: none
 
 .stream-item
-  padding: 2em 0 10em 10em
+  padding: 2em 0 10em 10.5em
   border-left: 0.3em solid #E8E8E8
   position: relative
   &:first-child:before

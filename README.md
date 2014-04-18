@@ -26,7 +26,7 @@ Pro správné generování souborů je třeba ručně nastavit cestu:
 [![prepros nastavení](http://dev.sablatura.info/jazyky-online.info/github.png)](https://github.com/subash/Prepros/issues/42#issuecomment-18397524)
 
 ### Další možné záludnosti
-soubor `haml/script.js` je soubor kompilující několik javascriptů, hlavní script pro práci s webovkou je umístěn v `/haml/js/_app.js`
+`haml/script.js` je soubor kompilující několik javascriptů, hlavní script pro práci s webovkou je umístěn v `/haml/js/_app.js`
 
 ## Použití
 
@@ -62,3 +62,8 @@ html/
     ├── ...
     └── a cokoli, co bude uživatel stahovat
 ```
+
+### Funkce použité pro generování
+
+* `= render(partial,locals = {})` - pomáhá includovat soubory + zároveň předává informace v objectu locals
+* `= reklama("slim")` - vytvoří div s reklamou, do budoucna počítá s různými velikostmi reklamy

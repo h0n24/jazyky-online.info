@@ -62,8 +62,6 @@ function getTableItems(obj,cat) {
 
 getTableItems("#get-slovicka","abstract");
 
-
-
 $("#set-slovicka a").on("click", function () {
   category = $(this).data("category");
   //console.log(category);
@@ -77,3 +75,15 @@ $("#set-slovicka a").on("click", function () {
 catch(err) {
   console.warn("Problém s načítáním jsonu. Pracujete na localhostu?");
 }
+
+
+// vyskočí modální okno u těch, kteří mají zaplý adblock
+function checkAds() {
+  if ($(".adsense ins.adsbygoogle").html() == "") {
+    $('#hlaska_po_blokaci').modal();
+  }
+}
+
+$(document).ready(function(){
+  setTimeout("checkAds();", 3000);
+});

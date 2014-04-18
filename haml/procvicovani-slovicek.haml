@@ -1,12 +1,12 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Učení se anglických slovíček"
+- $meta_description = "Modul procvičování anglických slovíček umožňuje uživatelům opakovat a aktivně procvičovat získanou slovní zásobu."
+- $meta_keywords = "Angličtina, procvičování anglických slovíček, slovíčka, testování slovíček, testy"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Modul procvičování anglických slovíček umožňuje uživatelům opakovat a aktivně procvičovat získanou slovní zásobu."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Učení se anglických slovíček
+  = render :menu, :page_type => "other", :h1_big => "Učení se anglických slovíček", :h1_small => ""
           
   .container.content
     %ul.skill-tree.old
@@ -125,4 +125,4 @@
             %a{:href => "#"}
               .skill-label
                 Zájmena
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

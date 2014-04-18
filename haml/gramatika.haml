@@ -1,12 +1,12 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Anglická gramatika"
+- $meta_description = "Modul Anglická gramatika obsahuje kolekci odkazů na stránky obsahující přehledy gramatiky, časování sloves, nepravidelná slovesa, popisy gramatických jevů, zájmena, přídavná jména, spojky, předložky a další užitečné informace důležité pro naučení gramatiky."
+- $meta_keywords = "Anglická gramatika, Angličtina gramatika, gramatika, pravopis, grammar"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Modul Anglická gramatika obsahuje kolekci odkazů na stránky obsahující přehledy gramatiky, časování sloves, nepravidelná slovesa, popisy gramatických jevů, zájmena, přídavná jména, spojky, předložky a další užitečné informace důležité pro naučení gramatiky."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Anglická gramatika<small>, základní přehled</small>
+  = render :menu, :page_type => "other", :h1_big => "Anglická gramatika", :h1_small => ", základní přehled"
           
   .container.content
     .row
@@ -16,43 +16,43 @@
             Stáhněte si
           %ul.nav.nav-sidenav
             %li
-              %a{:href => "#"}
+              %a{:href => "download/abeceda.pdf"}
                 Abeceda
             %li
-              %a{:href => "#"}
+              %a{:href => "download/podstatna_jmena.pdf"}
                 Podstatná jména
             %li
-              %a{:href => "#"}
+              %a{:href => "download/pridavna_jmena.pdf"}
                 Přídavná jména
             %li
-              %a{:href => "#"}
+              %a{:href => "download/cleny.pdf"}
                 Členy
             %li
-              %a{:href => "#"}
+              %a{:href => "download/zajmena.pdf"}
                 Zájmena
             %li
-              %a{:href => "#"}
+              %a{:href => "download/cislovky.pdf"}
                 Číslovky
             %li
-              %a{:href => "#"}
+              %a{:href => "download/datum_cas.pdf"}
                 Datum a čas
             %li
-              %a{:href => "#"}
+              %a{:href => "download/slovesa.pdf"}
                 Slovesa
             %li
-              %a{:href => "#"}
+              %a{:href => "download/prislovce.pdf"}
                 Příslovce
             %li
-              %a{:href => "#"}
+              %a{:href => "download/predlozky.pdf"}
                 Předložky
             %li
-              %a{:href => "#"}
+              %a{:href => "download/spojky.pdf"}
                 Spojky
             %li
-              %a{:href => "#"}
+              %a{:href => "download/citoslovce.pdf"}
                 Citoslovce
             %li
-              %a{:href => "#"}
+              %a{:href => "download/am_uk.pdf"}
                 Britská a americká angličtina
         .hidden-print.hidden-xs.affix-top.affix-side{:role => "complementary", :"data-spy" => "affix", :"data-offset-top" => "738", :"data-offset-bottom" => "10"}
           %h3.page-header
@@ -866,4 +866,4 @@
               %td
                 proto, tak
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

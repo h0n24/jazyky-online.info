@@ -1,12 +1,12 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Anglická frázová slovesa"
+- $meta_description = "Modul frázová slovesa obsahuje seznam několika set nejdůležitějších frázových sloves."
+- $meta_keywords = "Anglická frázová slovesa, frázová slovesa, frázová slovesa v Angličtině"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Modul frázová slovesa obsahuje seznam několika set nejdůležitějších frázových sloves."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Anglická frázová slovesa
+  = render :menu, :page_type => "other", :h1_big => "Anglická frázová slovesa", :h1_small => ""
           
   .container.content
     .row
@@ -1397,4 +1397,4 @@
               %td
                 pozvat, zvát dovnitř 
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

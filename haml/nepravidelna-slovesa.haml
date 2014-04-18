@@ -1,26 +1,25 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Nepravidelná slovesa"
+- $meta_description = "Modul nepravidelná slovesa obsahuje seznam nejčastěji používaných nepravidelných sloves a časování sloves. Znalost nepravidelných sloves je velmi důležitá pro naučení gramatiky."
+- $meta_keywords = "Anglická nepravidelná slovesa, nepravidelná slovesa, nepravidelná slovesa Angličtina, nepravidelná slovesa v Angličtině"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Modul nepravidelná slovesa obsahuje seznam nejčastěji používaných nepravidelných sloves a časování sloves. Znalost nepravidelných sloves je velmi důležitá pro naučení gramatiky."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Anglická nepravidelná slovesa
+  = render :menu, :page_type => "other", :h1_big => "Anglická nepravidelná slovesa", :h1_small => ""
           
   .container.content
     .row
       .table-responsive
         %table.table.table-condensed.table-all-col.table-striped.table-floathead.table-4th-row
           %thead
-            <tr>
-            <th>Infinitiv</th>
-            <th>Minulý čas</th>
-            <th>Minulé příčestí</th>
-            <th>Třetí osoba</th>
-            <th>Gerundium</th>
-            <th>Český význam</th>
-            </tr>
+            %tr
+              <th>Infinitiv</th>
+              <th>Minulý čas</th>
+              <th>Minulé příčestí</th>
+              <th>Třetí osoba</th>
+              <th>Gerundium</th>
+              <th>Český význam</th>
 
           %tbody
             <tr><td>arise</td><td>arose</td><td>arisen</td><td>arises</td><td>arising</td><td>nastat</td></tr>
@@ -182,4 +181,4 @@
             <tr><td>wring</td><td>wrung</td><td>wrung</td><td>wrings</td><td>wringing</td><td>zakroutit</td></tr>
             <tr><td>write</td><td>wrote</td><td>written</td><td>writes</td><td>writing</td><td>psát</td></tr>
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

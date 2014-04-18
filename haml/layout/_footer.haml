@@ -1,20 +1,27 @@
 %footer.hidden-print
   .container
-    %ul.footer-links
-      %li
-        &copy; 2007 - 2014
-    %ul.footer-links
-      %li
-        %a{:href => "#"}= "Copyright"
-      %li= "·"
-      %li
-        %a{:href => "#"}= "Licence"
-      %li= "·"
-      %li
-        %a{:href => "#"}= "Inzerce"
-      %li= "·"
-      %li
-        %a{:href => "#"}= "Kontakt"
+    .row
+      .col-md-8.col-md-offset-2
+        %p.footer-text
+          #{$text_footer}
+        %ul.footer-links.pull-left
+          %li
+            &copy; 2007 - 2014
+          %li= "·"
+          %li
+            %a{:href => "#"}= "Copyright"
+          %li= "·"
+          %li
+            %a{:href => "#"}= "Licence"
+          %li= "·"
+          %li
+            %a{:href => "#"}= "Inzerce"
+          %li= "·"
+          %li
+            %a{:href => "#"}= "Kontakt"
+        %ul.footer-links.pull-right
+          %li
+            %a{:href => "#top"}= "↑ nahoru"
 
 %script{:src => "http://code.jquery.com/jquery-2.1.0.min.js"}
 %script{:src => "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}

@@ -1,6 +1,4 @@
 //@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-//@import "fonts.css"
-
 
 @font-face
   font-family: 'rockets'
@@ -235,7 +233,7 @@ h4, .h4, h5, .h5, h6, .h6
   padding-bottom: 1.5em
 
 .activity-stream
-  margin: 0 0 0 5em
+  margin: 0 0 -10em 5em
   padding: 0
   list-style: none
 
@@ -262,6 +260,8 @@ h4, .h4, h5, .h5, h6, .h6
     color: #E8E8E8
     font-size: 38pt
     font-weight: 100
+  &:last-child
+    padding-bottom: 20em
 
 .hi-icon-wrap
   text-align: center
@@ -660,13 +660,15 @@ footer
   margin-top: 1em
   padding-left: 0
   color: #999
-  width: 100%
-  text-align: center
   font-size: 10pt
   & li
     display: inline
-  & a
-    color: #999
+
+.footer-text
+  color: #999
+  font-size: 10pt
+  text-align: justify
+  margin: 0 auto
 
 .hi-icon
   padding: 0
@@ -788,6 +790,9 @@ footer
 
   .activity-stream
     margin: 0
+
+  .stream-item:last-child
+    padding-bottom: 10em
 
   .stream-item
     padding: 0 0 5em 1em

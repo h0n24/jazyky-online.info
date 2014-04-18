@@ -1,12 +1,12 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Základní anglické fráze"
+- $meta_description = "Modul Anglické fráze obsahuje vice než sto nejběžnějších frází používaných v konverzaci a běžné komunikaci. Fráze jsou rozděleny do skupin pozdrav, přání, otázka, odpověď, problém, komunikace v hotelu, v restauraci atd."
+- $meta_keywords = "Anglické fráze, fráze, konverzace, dialog, rozhovor, pozdrav, komunikace"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Modul Anglické fráze obsahuje vice než sto nejběžnějších frází používaných v konverzaci a běžné komunikaci. Fráze jsou rozděleny do skupin pozdrav, přání, otázka, odpověď, problém, komunikace v hotelu, v restauraci atd."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body{:"data-spy" => "scroll", :"data-target" => "#nav-scrollpsy", :"data-offset" => "100"}
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Základní anglické fráze<small>, anglická konverzace</small>
+  = render :menu, :page_type => "other", :h1_big => "Základní anglické fráze", :h1_small => ", anglická konverzace"
           
   .container.content
     .row
@@ -116,4 +116,4 @@
           %table.table.table-condensed.table-2-col.table-borderless.table-4th-row
             <tr><th>English</th><th>Czech</th><td></td></tr><tr><td>Bon appetit!</td><td>Dobrou chuť</td></tr><tr><td>Good luck / Success</td><td>Hodně štěstí</td></tr><tr><td>Best wishes</td><td>Vše nejlepší</td></tr><tr><td>Congratulations on your birthday</td><td>Blahopřeji ti k narozeninám. </td></tr><tr><td>Happy holidays</td><td>Šťastné svátky</td></tr><tr><td>Happy New Year!</td><td>Šťastný nový rok!</td></tr><tr><td>Have a good trip</td><td>Štastnou cestu</td></tr><tr><td>Merry Christmas and a happy new year!</td><td>Veselé vánoce a šťastný nový rok</td></tr><tr><td>Merry Christmas!</td><td>Štastné a veselé vánoce</td></tr><tr><td>All the best</td><td>Vše nejlepší</td></tr><tr><td>Congratulations on your birthday!</td><td>Vše nejlepší k narozeninám!</td></tr><tr><td>Have a good trip</td><td>Šťastnou cestu</td></tr><tr><td>Have a nice holiday</td><td>Užij si prázdnin</td></tr><tr><td>Have fun</td><td>Hodně štěstí</td></tr>
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

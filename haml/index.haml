@@ -1,17 +1,13 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Angličtina online"
+- $meta_description = "Anglický jazyk na portálu Jazyky-online.info"
+- $meta_keywords = "Angličtina, Angličtina online, Angličtina online zdarma, Anglický jazyk, english, výuka Angličtiny, Angličtina pro samouky"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Na těchto stránkách naleznete materiály pro podporu výuky anglického jazyka. Obsah je přehledně a logicky uspořádán do modulů, které jsou neustále aktualizovány a doplňovány. Naleznete zde například moduly anglická gramatika, anglická slovíčka, procvičování, obrázkový slovník, anglické fráze a další užitečné informace. Naším cílem je vytvořit informační zdroj obsahující všechny potřebné informace k tomu, aby se uživatelé snáze naučili anglický jazyk. Věříme, že na našich stránkách najdete vše, co budete ke svému studiu anglického jazyka potřebovat."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body
-  = render_file('layout/_menu.haml')
-  .jumbotron
-    .container
-      %h1
-        Angličtina
-      %p
-        Z pohodlí vašeho domova.
-        %br
-        Pro samouky, online a zdarma.
-          
+  = render :menu, :page_type => "index", :h1_big => "Angličtina", :h1_small => "Z pohodlí vašeho domova.<br>Pro samouky, online a zdarma."
+  
   .container.content
     %ul.activity-stream
       %li.stream-item
@@ -123,9 +119,4 @@
         %br
         <a href="#">Cestování</a>    
 
-  %footer.hidden-print
-    .container
-      %small
-        Na těchto stránkách naleznete materiály pro podporu výuky anglického jazyka. Obsah je přehledně a logicky uspořádán do modulů, které jsou neustále aktualizovány a doplňovány. Naleznete zde například moduly anglická gramatika, anglická slovíčka, procvičování, obrázkový slovník, anglické fráze a další užitečné informace. Naším cílem je vytvořit informační zdroj obsahující všechny potřebné informace k tomu, aby se uživatelé snáze naučili anglický jazyk. Věříme, že na našich stránkách najdete vše, co budete ke svému studiu anglického jazyka potřebovat.
-
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

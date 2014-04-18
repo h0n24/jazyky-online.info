@@ -1,6 +1,10 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Angličtina online"
+- $meta_description = "Anglický jazyk na portálu Jazyky-online.info"
+- $meta_keywords = "Angličtina, Angličtina online, Angličtina online zdarma, Anglický jazyk, english, výuka Angličtiny, Angličtina pro samouky"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Portál Jazyky-online.info je určený pro podporu výuky cizích jazyků jak pro <strong>samouky</strong> z řad dospělých, tak i pro děti a nejmenší. Web obsahuje moduly pro výuku angličtiny a dalších světových jazyků pro <strong>začátečníky i pokročilé</strong>. Navíc vše na Jazyky-online.info pro Vás <strong>zdarma</strong>."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body
   .jumbotron.no-touch.intro
     .hi-icon-wrap.hi-icon-effect-5.hi-icon-effect-5a
@@ -45,4 +49,4 @@
             japonštinu
     
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

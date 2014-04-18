@@ -1,12 +1,12 @@
-- $LOAD_PATH << '.'
 - require '_helpers'
-= render_file('layout/_wrap.haml')
+- $title = "Anglická slovíčka"
+- $meta_description = "Stránka Anglická slovíčka obsahuje databázi základních slovíček rozdělenou do tématických skupin jako například barvy, oblečení, jídlo, město atd. Tento modul je vhodný především pro učení, procvičování a rozšiřování slovní zásoby."
+- $meta_keywords = "Anglická slovíčka, Anglická slovní zásoba, slovní zásoba, slovíčka"
+- $meta_subject = "Cizí jazyk. Výuka jazyků. Gramatika. Slovíčka. Testy. Jazyková zkouška. Slovesa. Fráze. Výslovnost. Angličtina. Němčina. Francouzština."
+- $text_footer = "Stránka Anglická slovíčka obsahuje databázi základních slovíček rozdělenou do tématických skupin jako například barvy, oblečení, jídlo, město atd. Tento modul je vhodný především pro učení, procvičování a rozšiřování slovní zásoby."
+= render :wrap, :title => $title, :meta_description => $meta_description, :meta_keywords => $meta_keywords, :meta_subject => $meta_subject
 %body
-  = render_file('layout/_menu.haml')
-  .jumbotron.small
-    .container
-      %h1
-        Anglická slovíčka<small>, slovní zásoba v angličtině</small>
+  = render :menu, :page_type => "other", :h1_big => "Anglická slovíčka", :h1_small => ", slovní zásoba v angličtině"
           
   .container.content
     .row
@@ -525,4 +525,4 @@
               množství
 
 
-  = render_file('layout/_footer.haml')
+  = render :footer, :text_footer => $text_footer

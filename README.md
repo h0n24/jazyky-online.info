@@ -1,6 +1,6 @@
 # Jazyky online, redesign 2014
 
-pracovní verze pro redesign stránky [Bootstrap](http://www.jazyky-online.info/)
+pracovní verze pro redesign stránky [jazyky-online.info](http://www.jazyky-online.info/)
 
 ## Instalace
 
@@ -8,7 +8,7 @@ Postup instalace:
 
 ### 1) Github
 
-Stáhnout [Github for Windows](https://windows.github.com/). A přihlásit se. Poté do něj naklonovat tento projekt - stačí kliknout na tlačítko vpravo dole, nebo ručně vložit adresu
+Stáhnout [Github for Windows](https://windows.github.com/). A naklonovat do něj tento projekt - stačí kliknout na tlačítko vpravo dole, nebo ručně vložit adresu
 
 ```
 https://github.com/h0n24/jazyky-online.info
@@ -20,13 +20,13 @@ Stáhnout [Prepros](http://alphapixels.com/prepros/). Přidat nový projekt (= c
 
 #### Pozor!
 Pro správné generování souborů je třeba ručně nastavit cestu:
-* souboru haml/script.js → html/min/script.min.js
-* souboru haml/style.sass → html/min/style.min.css
+* souboru `haml/script.js` → `html/min/script.min.js`
+* souboru `haml/style.sass` → `html/min/style.min.css`
 
 [![prepros nastavení](http://dev.sablatura.info/jazyky-online.info/github.png)](https://github.com/subash/Prepros/issues/42#issuecomment-18397524)
 
 ### Další možné záludnosti
-soubor haml/script.js je soubor kompilující několik javascriptů, hlavní script pro práci s webovkou je umístěn v /haml/js/_app.js
+soubor `haml/script.js` je soubor kompilující několik javascriptů, hlavní script pro práci s webovkou je umístěn v `/haml/js/_app.js`
 
 ## Použití
 

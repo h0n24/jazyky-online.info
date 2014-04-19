@@ -11,22 +11,48 @@
   .container.content
     .row
       .col-md-2
-        Celkový počet slovíček v databázi: 1611
-        %br
-        Z toho už umím: 540
-        %br
-        %br
-        Dokážu rozumět 40% odborného textu
-        %br
-        50% beletrie
-        %br
-        A chápu 70% mluvené řeči
+        .hidden-print.affix-side.affix-margin.text-muted
+          %h3.page-header
+            Už umím
+          %table.table.table-condensed.table-borderless
+            %tr
+              %td
+                2 z 11 slovíček
+            %tr
+              %td
+                .progress
+                  .progress-bar.progress-bar-subtle{:role => "progressbar", :"aria-valuenow" => "30", :"aria-valuemin" => "0", :"aria-valuemax" => "100", :style => "width: 30%"}
+                    %small 
+                      6 %
 
-      .col-md-9.col-md-offset-1
-        %ul.skill-tree
+          %h4
+            Poslední
+          %table.table.table-condensed.table-borderless
+            %tr
+              %td
+                blue
+            %tr
+              %td
+                red
+
+      .col-md-9.col-md-offset-1#learning
+        %img.img-thumbnail.img-responsive.pull-right{:src => "img/vocabulary/colors/green.png", :alt => "green", :width => "200"}
+        %h2.page-header#english Green
+
+        %form#input_form.form-inline{:role => "form"}
+          .form-group.has-feedback
+            <span class="glyphicon form-control-feedback"></span>
+            <input type="text" class="form-control input-lg" id="input_word" placeholder="Přeložte do češtiny" autocomplete="off">
+          .form-group
+            <button type="button" class="btn btn-default btn-lg" id="next_word">Další slovíčko</button>
+          
+        %div{:style => "display:block;margin-top:9em"}
+        = reklama("slim")
+
+        %ul.skill-tree.hidden
           %li.skill-tree-row
             %ul.skills
-              %li.skill.barvy
+              %li.skill.barvy.learned
                 %a{:href => "#"}
                   .skill-label
                     Barvy
@@ -140,4 +166,4 @@
                   .skill-label
                     Zájmena
 
-  = render :footer, :text_footer => $text_footer
+  = render :footer, :hidden => false, :text_footer => $text_footer

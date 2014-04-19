@@ -11,21 +11,56 @@
   .container.content
     .row
       .col-md-2
-        Celkový počet slovíček v databázi: 1611
-        %br
-        Z toho už umím: 540
-        %br
-        %br
-        Dokážu rozumět 40% odborného textu
-        %br
-        50% beletrie
-        %br
-        A chápu 70% mluvené řeči
+        .hidden-print.affix-side.affix-margin.text-muted
+          %h3.page-header
+            Můj postup
+          %h4
+            Už umím
+          %table.table.table-condensed.table-borderless.table-2-col
+            %tr
+              %td
+                %small
+                  540
+              %td
+                %small
+                  slovíček
+            %tr
+              %td{:colspan => "2"}
+                .progress
+                  .progress-bar.progress-bar-subtle{:role => "progressbar", :"aria-valuenow" => "30", :"aria-valuemin" => "0", :"aria-valuemax" => "100", :style => "width: 30%"}
+                    %small 
+                      30 %
+
+          %h4
+            Rozumím
+          %table.table.table-condensed.table-borderless.table-2-col
+            %tr
+              %td
+                %small
+                  40 %
+              %td
+                %small
+                  odbornému textu
+            %tr
+              %td
+                %small
+                  50 %
+              %td
+                %small
+                  beletrie
+            %tr
+              %td
+                %small
+                  70 %
+              %td
+                %small
+                  mluvené řeči
+
       .col-md-9.col-md-offset-1
-        %ul.skill-tree.old
+        %ul.skill-tree
           %li.skill-tree-row
             %ul.skills
-              %li.skill.barvy
+              %li.skill.barvy.learned
                 %a{:href => "#"}
                   .skill-label
                     Barvy
@@ -138,5 +173,5 @@
                 %a{:href => "#"}
                   .skill-label
                     Zájmena
-                    
-  = render :footer, :text_footer => $text_footer
+
+  = render :footer, :hidden => false, :text_footer => $text_footer

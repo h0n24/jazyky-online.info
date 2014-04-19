@@ -58,6 +58,8 @@ function getTableItems(obj,cat) {
   });
   $(obj).html(items);
   $(obj).prev("h2").html(cat);
+  $("#set-slovicka li.active").removeClass("active");
+  $("#set-slovicka a[data-category='"+cat+"']").parent().addClass("active");
 }
 
 getTableItems("#get-slovicka","abstract");
@@ -75,6 +77,39 @@ $("#set-slovicka a").on("click", function () {
 catch(err) {
   console.warn("Problém s načítáním jsonu. Pracujete na localhostu?");
 }
+
+$('#learning #input_word').focus();
+
+var word = "zelená";
+
+$('#learning #input_word').on("keyup", function () {
+  var actual = $(this).val();
+  word = word.toLowerCase();
+  actual = actual.toLowerCase();
+  console.log(actual);
+  if (actual == "") {
+    $('#learning .form-group').removeClass('has-success').removeClass('has-error');
+    $('#learning .form-control-feedback').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+  }
+  else {
+    if (word.indexOf(actual) >= 0) {
+      $('#learning .form-group').removeClass('has-error').addClass('has-success');
+      $('.form-control-feedback').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+      if (word == actual) {
+        $('#learning .form-group').removeClass('has-success');
+        $("#input_word").attr('disabled', true);
+        $("#next_word").removeClass("btn-default").addClass("btn-primary");
+        $("#next_word").focus();
+      }
+    }
+    else {
+      $('#learning .form-group').removeClass('has-success').addClass('has-error');
+      $('.form-control-feedback').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+    };
+  };
+
+});
+
 
 
 // vyskočí modální okno u těch, kteří mají zaplý adblock

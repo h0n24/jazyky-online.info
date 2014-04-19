@@ -344,17 +344,17 @@
     "tie": ["kravata", "vázanka"]
   },
   "color": {
-    "black": "černý",
-    "blue": "modrý",
-    "brown": "hnědý",
-    "gray": "šedý",
-    "green": "zelený",
-    "orange": "oranžový",
-    "pink": "růžový",
-    "red": ["červený", "rudý"],
-    "violet": "fialový",
-    "white": "bílý",
-    "yellow": ["žlutý", "žloutkově žlutý"]
+    "black": ["černý", "černá", "černé"],
+    "blue": ["modrý", "modrá", "modré"],
+    "brown": ["hnědý", "hnědá", "hnědé"],
+    "gray": ["šedý", "šedá", "šedé"],
+    "green": ["zelený", "zelená", "zelené"],
+    "orange": ["oranžový", "oranžová", "oranžové"],
+    "pink": ["růžový", "růžová", "růžové"],
+    "red": ["červený", "červená", "červené", "rudý", "rudá", "rudé"],
+    "violet": ["fialový", "fialová", "fialové"],
+    "white": ["bílý", "bílá", "bílé"],
+    "yellow": ["žlutý", "žlutá", "žluté", "žloutkově žlutý", "žloutkově žlutá", "žloutkově žluté"]
   },
   "communication": {
     "announcement": ["proklamace", "prohlášení"],

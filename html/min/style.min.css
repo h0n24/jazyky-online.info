@@ -44,11 +44,25 @@ body {
   color: #0e83cd;
 }
 
+.btn-success {
+  border-color: #4cae4c;
+  color: #4cae4c;
+  background-image: none;
+  background-color: white;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
   border-color: #07466e;
   background-image: none;
   background-color: white;
   color: #07466e;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+  border-color: #2d672d;
+  background-image: none;
+  background-color: white;
+  color: #2d672d;
 }
 
 .capitalize, .capitalize * {
@@ -127,7 +141,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 
 .nav-sidenav {
   max-height: 60%;
-  max-height: 80vh;
+  max-height: 50vh;
   min-width: 163px;
   width: 100%;
   overflow: auto;
@@ -151,7 +165,7 @@ h4, .h4, h5, .h5, h6, .h6 {
   background: #e8e8e8;
 }
 .nav-sidenav:hover::-webkit-scrollbar-thumb {
-  background: #cccccc;
+  background: #b5b5b5;
 }
 .nav-sidenav li:nth-child(4n) {
   margin-bottom: 2em;
@@ -436,6 +450,63 @@ h4, .h4, h5, .h5, h6, .h6 {
     opacity: 1;
   }
 }
+.hi-icon {
+  padding: 0;
+  margin: 0;
+}
+
+.hi-icon-wrap {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.hi-icon-wrap .hi-icon {
+  background: #0e83cd;
+  margin-top: -16px;
+}
+
+.hi-icon-wrap .hi-icon:hover {
+  color: #2a6496;
+  text-decoration: none;
+}
+
+.hi-icon-effect-5 .hi-icon {
+  border: 2px solid #0e83cd;
+  box-shadow: 0 0 0 4px white;
+  color: white;
+  z-index: 2;
+}
+
+.hi-icon-wrap:hover:after {
+  content: "←  zpět na hlavní stránku";
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 30em;
+  height: 50px;
+  background: white;
+  padding-left: 110px;
+  margin: 0;
+  font-size: 10pt;
+  text-align: left;
+  line-height: 50px;
+  z-index: 1;
+}
+
+.hi-icon-wrap:hover:after:hover {
+  background: red;
+}
+
+.hi-icon-wrap:after:hover {
+  background: blue;
+}
+
+.hi-icon-effect-5 .hi-icon:hover {
+  color: #0e83cd !important;
+  box-shadow: 0 0 0 8px rgba(14, 131, 205, 0.3) !important;
+}
+
 .stream-item-type {
   position: absolute;
   text-align: center;
@@ -530,8 +601,11 @@ h4, .h4, h5, .h5, h6, .h6 {
   background-position: 24px 28px;
   transition: all 0.3s ease-in;
 }
+.skill.learned {
+  border-color: #64bb5d;
+}
 .skill:hover {
-  border-color: #dddddd;
+  border-color: #b5b5b5;
 }
 .skill:last-child {
   margin-right: 0;
@@ -623,144 +697,6 @@ h4, .h4, h5, .h5, h6, .h6 {
   background-position: 24px 28px;
 }
 
-.skill-tree.old .skill {
-  position: relative;
-  text-align: center;
-  padding: 2em;
-  width: 7em;
-  height: 7em;
-  border: 0.3em solid #e8e8e8;
-  border-radius: 7em;
-  display: block;
-  margin-right: 2em;
-  margin-top: -3.5em;
-  margin-bottom: 7em;
-  float: left;
-  background: white;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-size: 5em 5em;
-  background-position: 0.9em 0.9em;
-  transition: all 0.3s ease-in;
-}
-.skill-tree.old .skill:hover {
-  border-color: #dddddd;
-}
-.skill-tree.old .skill:last-child {
-  margin-right: 0;
-}
-.skill-tree.old .skill a {
-  width: 7em;
-  height: 10em;
-  display: block;
-  top: -2.3em;
-  left: -2.3em;
-  position: relative;
-  background: none !important;
-  border-radius: 5em;
-  border: 1px solid transparent;
-}
-.skill-tree.old .skill.matematika {
-  background-image: url("../img/iconmonstr-calculator-6-icon-256.png");
-  background-image: none, url("../img/iconmonstr-calculator-6-icon.svg");
-}
-.skill-tree.old .skill.cisla {
-  background-image: url("../img/iconmonstr-sort-22-icon-256.png");
-  background-image: none, url("../img/iconmonstr-sort-22-icon.svg");
-}
-.skill-tree.old .skill.latky {
-  background-image: url("../img/iconmonstr-flask-5-icon-256.png");
-  background-image: none, url("../img/iconmonstr-flask-5-icon.svg");
-}
-.skill-tree.old .skill.zemepis {
-  background-image: url("../img/iconmonstr-anchor-4-icon-256.png");
-  background-image: none, url("../img/iconmonstr-anchor-4-icon.svg");
-}
-.skill-tree.old .skill.dum {
-  background-image: url("../img/iconmonstr-christmas-house-icon-256.png");
-  background-image: none, url("../img/iconmonstr-christmas-house-icon.svg");
-}
-.skill-tree.old .skill.napoje {
-  background-image: url("../img/iconmonstr-coffee-8-icon-256.png");
-  background-image: none, url("../img/iconmonstr-coffee-8-icon.svg");
-}
-.skill-tree.old .skill.nadoby {
-  background-image: url("../img/iconmonstr-beer-10-icon-256.png");
-  background-image: none, url("../img/iconmonstr-beer-10-icon.svg");
-}
-.skill-tree.old .skill.barvy {
-  background-image: url("../img/iconmonstr-magic-3-icon-256.png");
-  background-image: none, url("../img/iconmonstr-magic-3-icon.svg");
-}
-.skill-tree.old .skill.rodina {
-  background-image: url("../img/iconmonstr-favorite-3-icon-256.png");
-  background-image: none, url("../img/iconmonstr-favorite-3-icon.svg");
-}
-.skill-tree.old .skill.telo {
-  background-image: url("../img/iconmonstr-user-2-icon-256.png");
-  background-image: none, url("../img/iconmonstr-user-2-icon.svg");
-}
-.skill-tree.old .skill.jidlo {
-  background-image: url("../img/iconmonstr-christmas-gingerbread-3-icon-256.png");
-  background-image: none, url("../img/iconmonstr-christmas-gingerbread-3-icon.svg");
-}
-.skill-tree.old .skill.ovoce {
-  background-image: url("../img/iconmonstr-apple-os-icon-256.png");
-  background-image: none, url("../img/iconmonstr-apple-os-icon.svg");
-}
-.skill-tree.old .skill.zelenina {
-  background-image: url("../img/iconmonstr-pen-12-icon-256.png");
-  background-image: none, url("../img/iconmonstr-pen-12-icon.svg");
-}
-.skill-tree.old .skill.mesto {
-  background-image: url("../img/iconmonstr-shop-icon-256.png");
-  background-image: none, url("../img/iconmonstr-shop-icon.svg");
-}
-.skill-tree.old .skill.zvirata {
-  background-image: url("../img/iconmonstr-christmas-reindeer-icon-256.png");
-  background-image: none, url("../img/iconmonstr-christmas-reindeer-icon.svg");
-}
-.skill-tree.old .skill.priroda {
-  background-image: url("../img/iconmonstr-brightness-3-icon-256.png");
-  background-image: none, url("../img/iconmonstr-brightness-3-icon.svg");
-}
-.skill-tree.old .skill.obleceni {
-  background-image: url("../img/iconmonstr-christmas-hat-icon-256.png");
-  background-image: none, url("../img/iconmonstr-christmas-hat-icon.svg");
-}
-.skill-tree.old .skill.stroje {
-  background-image: url("../img/iconmonstr-wrench-5-icon-256.png");
-  background-image: none, url("../img/iconmonstr-wrench-5-icon.svg");
-}
-.skill-tree.old .skill.nabytek {
-  background-image: url("../img/iconmonstr-3d-view-icon-256.png");
-  background-image: none, url("../img/iconmonstr-3d-view-icon.svg");
-}
-.skill-tree.old .skill.doprava {
-  background-image: url("../img/iconmonstr-direction-7-icon-256.png");
-  background-image: none, url("../img/iconmonstr-direction-7-icon.svg");
-}
-.skill-tree.old .skill.povolani {
-  background-image: url("../img/iconmonstr-briefcase-4-icon-256.png");
-  background-image: none, url("../img/iconmonstr-briefcase-4-icon.svg");
-}
-.skill-tree.old .skill.cas {
-  background-image: url("../img/iconmonstr-time-10-icon-256.png");
-  background-image: none, url("../img/iconmonstr-time-10-icon.svg");
-}
-.skill-tree.old .skill.pridavna-jmena {
-  background-image: url("../img/iconmonstr-copy-icon-256.png");
-  background-image: none, url("../img/iconmonstr-copy-icon.svg");
-}
-.skill-tree.old .skill.slovesa {
-  background-image: url("../img/iconmonstr-copy-2-icon-256.png");
-  background-image: none, url("../img/iconmonstr-copy-2-icon.svg");
-}
-.skill-tree.old .skill.zajmena {
-  background-image: url("../img/iconmonstr-copy-3-icon-256.png");
-  background-image: none, url("../img/iconmonstr-copy-3-icon.svg");
-}
-
 .table-4th-row tr:nth-child(4n) td:last-child {
   padding-bottom: 2em;
 }
@@ -785,7 +721,10 @@ h4, .h4, h5, .h5, h6, .h6 {
   font-size: 11pt;
 }
 
-.table-borderless * {
+.table-borderless td, .table-borderless tr, .table-borderless th {
+  border: none !important;
+}
+.table-borderless.table {
   border: none !important;
 }
 
@@ -813,6 +752,30 @@ h4, .h4, h5, .h5, h6, .h6 {
   background: white;
 }
 
+.progress-bar.progress-bar-subtle {
+  background-color: #b5b5b5;
+}
+
+#input_word {
+  cursor: inherit;
+}
+
+#next_word.btn-default:hover, #next_word.btn-default:active, #next_word.btn-default:focus {
+  background-color: white;
+}
+
+#next_word.btn-primary:focus {
+  outline: none;
+  border-color: #0e83cd;
+  background-color: white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#next_word.btn-primary:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  background-color: white;
+}
+
 footer {
   margin-top: 2em;
 }
@@ -832,63 +795,6 @@ footer {
   font-size: 10pt;
   text-align: justify;
   margin: 0 auto;
-}
-
-.hi-icon {
-  padding: 0;
-  margin: 0;
-}
-
-.hi-icon-wrap {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-}
-
-.hi-icon-wrap .hi-icon {
-  background: #0e83cd;
-  margin-top: -16px;
-}
-
-.hi-icon-wrap .hi-icon:hover {
-  color: #2a6496;
-  text-decoration: none;
-}
-
-.hi-icon-effect-5 .hi-icon {
-  border: 2px solid #0e83cd;
-  box-shadow: 0 0 0 4px white;
-  color: white;
-  z-index: 2;
-}
-
-.hi-icon-wrap:hover:after {
-  content: "←  zpět na hlavní stránku";
-  position: fixed;
-  display: block;
-  top: 0;
-  width: 30em;
-  height: 50px;
-  background: white;
-  padding-left: 110px;
-  margin: 0;
-  font-size: 10pt;
-  text-align: left;
-  line-height: 50px;
-  z-index: 1;
-}
-
-.hi-icon-wrap:hover:after:hover {
-  background: red;
-}
-
-.hi-icon-wrap:after:hover {
-  background: blue;
-}
-
-.hi-icon-effect-5 .hi-icon:hover {
-  color: #0e83cd !important;
-  box-shadow: 0 0 0 8px rgba(14, 131, 205, 0.3) !important;
 }
 
 @media print {

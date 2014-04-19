@@ -25,6 +25,11 @@ $primary-color: #0E83CD // anglická
 $primary-color-darken: darken($primary-color, 20%)
 $primary-color-lighten: lighten($primary-color, 20%)
 
+// komplementární barvy
+$gray: #E8E8E8
+$gray-darken: darken($gray, 20%)
+$gray-lighten: lighten($gray, 20%)
+
 // opravy bootstrapu
 .navbar
   margin-bottom: 0
@@ -52,11 +57,23 @@ body
   background-color: #FFF
   color: $primary-color
 
+.btn-success
+  border-color: #4CAE4C
+  color: #4CAE4C
+  background-image: none
+  background-color: #FFF
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary
   border-color: $primary-color-darken
   background-image: none
   background-color: #FFF
   color: $primary-color-darken
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success
+  border-color: darken(#4CAE4C, 20%)
+  background-image: none
+  background-color: #FFF
+  color: darken(#4CAE4C, 20%)
 
 .capitalize, .capitalize *
   text-transform: capitalize
@@ -114,14 +131,14 @@ h4, .h4, h5, .h5, h6, .h6
   font-size: 10pt
 
 .nav>li>a:hover, .nav>li>a:focus
-  background-color: #E8E8E8
+  background-color: $gray
 
 .navbar-toggle .icon-bar
   background-color: $primary-color
 
 .nav-sidenav
   max-height: 60%
-  max-height: 80vh
+  max-height: 50vh
   min-width: 163px
   width: 100%
   overflow: auto
@@ -139,9 +156,9 @@ h4, .h4, h5, .h5, h6, .h6
     transition: inherit
     background: #fff
   &::-webkit-scrollbar-thumb
-    background: #E8E8E8
+    background: $gray
   &:hover::-webkit-scrollbar-thumb
-    background: #ccc
+    background: $gray-darken
   & li:nth-child(4n)
     margin-bottom: 2em
   &.nav>li
@@ -153,7 +170,7 @@ h4, .h4, h5, .h5, h6, .h6
   &.nav>li>a:hover
     background: none
     text-shadow: none
-    background-color: #E8E8E8
+    background-color: $gray
     border-right: 2px solid #fff
 
 .affix-side
@@ -255,7 +272,7 @@ h4, .h4, h5, .h5, h6, .h6
 
 .stream-item
   padding: 2em 0 10em 10.5em
-  border-left: 0.3em solid #E8E8E8
+  border-left: 0.3em solid $gray
   position: relative
   &:first-child:before
     width: 3px
@@ -272,7 +289,7 @@ h4, .h4, h5, .h5, h6, .h6
     line-height: 0
   & h2
     margin-bottom: 1em
-    color: #E8E8E8
+    color: $gray
     font-size: 38pt
     font-weight: 100
   &:last-child
@@ -369,13 +386,64 @@ h4, .h4, h5, .h5, h6, .h6
   51%
     opacity: 1
 
+.hi-icon
+  padding: 0
+  margin: 0
+
+.hi-icon-wrap
+  margin: 0
+  padding: 0
+  position: absolute
+
+.hi-icon-wrap .hi-icon
+  background: $primary-color
+  margin-top: -16px
+
+.hi-icon-wrap .hi-icon:hover
+  color: #2A6496
+  text-decoration: none
+
+.hi-icon-effect-5 .hi-icon
+  border: 2px solid $primary-color
+  box-shadow: 0 0 0 4px #fff
+  color: #fff
+  z-index: 2
+
+.hi-icon-wrap:hover:after
+  content: "←  zpět na hlavní stránku"
+  position: fixed
+  display: block
+  top: 0
+  width: 30em
+  height: 50px
+  background: #fff
+  padding-left: 110px
+  margin: 0
+  font-size: 10pt
+  text-align: left
+  line-height: 50px
+  z-index: 1
+
+.hi-icon-wrap:hover:after:hover
+  background: red
+
+.hi-icon-wrap:after:hover
+  background: blue
+
+
+.hi-icon-effect-5 .hi-icon:hover
+  color: $primary-color !important
+  box-shadow: 0 0 0 8px rgba($primary-color, 0.3) !important
+
+
+
 .stream-item-type
   position: absolute
   text-align: center
   padding: 2em
   width: 10em
   height: 10em
-  border: 0.3em solid #E8E8E8
+  border: 0.3em solid $gray
   border-radius: 10em
   display: block
   left: -5em
@@ -406,7 +474,7 @@ h4, .h4, h5, .h5, h6, .h6
       left: 0.2em
 
 .stream-item-keywords
-  border: 0.3em solid #E8E8E8
+  border: 0.3em solid $gray
   padding: 2em
   margin-bottom: 2em
   font-size: 11pt
@@ -424,7 +492,7 @@ h4, .h4, h5, .h5, h6, .h6
   margin-bottom: -2em
 
 .skills
-  border-top: .3em solid #E8E8E8
+  border-top: .3em solid $gray
   margin-top: 3.5em
 
 .skill-label
@@ -439,7 +507,7 @@ h4, .h4, h5, .h5, h6, .h6
   padding: 2em
   width: 7em
   height: 7em
-  border: .3em solid #E8E8E8
+  border: .3em solid $gray
   border-radius: 7em
   display: block
   margin-right: 2em
@@ -451,8 +519,10 @@ h4, .h4, h5, .h5, h6, .h6
   background-repeat: no-repeat
   background-position: 24px 28px
   transition: all .3s ease-in
+  &.learned
+    border-color: #64BB5D
   &:hover
-    border-color: #ddd
+    border-color: $gray-darken
   &:last-child
     margin-right: 0
   & a
@@ -516,115 +586,6 @@ h4, .h4, h5, .h5, h6, .h6
   &.zajmena
     background-position: 24px 28px
 
-.skill-tree.old .skill
-  position: relative
-  text-align: center
-  padding: 2em
-  width: 7em
-  height: 7em
-  border: .3em solid #E8E8E8
-  border-radius: 7em
-  display: block
-  margin-right: 2em
-  margin-top: -3.5em
-  margin-bottom: 7em
-  float: left
-  background: #FFF
-  background-image: none
-  background-repeat: no-repeat
-  background-size: 5em 5em
-  background-position: .9em .9em
-  transition: all .3s ease-in
-  &:hover
-    border-color: #ddd
-  &:last-child
-    margin-right: 0
-  & a
-    width: 7em
-    height: 10em
-    display: block
-    top: -2.3em
-    left: -2.3em
-    position: relative
-    background: none !important
-    border-radius: 5em
-    border: 1px solid rgba(0, 0, 0, 0)
-  &.matematika
-    background-image: url('../img/iconmonstr-calculator-6-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-calculator-6-icon.svg')
-  &.cisla
-    background-image: url('../img/iconmonstr-sort-22-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-sort-22-icon.svg')
-  &.latky
-    background-image: url('../img/iconmonstr-flask-5-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-flask-5-icon.svg')
-  &.zemepis
-    background-image: url('../img/iconmonstr-anchor-4-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-anchor-4-icon.svg')
-  &.dum
-    background-image: url('../img/iconmonstr-christmas-house-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-christmas-house-icon.svg')
-  &.napoje
-    background-image: url('../img/iconmonstr-coffee-8-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-coffee-8-icon.svg')
-  &.nadoby
-    background-image: url('../img/iconmonstr-beer-10-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-beer-10-icon.svg')
-  &.barvy
-    background-image: url('../img/iconmonstr-magic-3-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-magic-3-icon.svg')
-  &.rodina
-    background-image: url('../img/iconmonstr-favorite-3-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-favorite-3-icon.svg')
-  &.telo
-    background-image: url('../img/iconmonstr-user-2-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-user-2-icon.svg')
-  &.jidlo
-    background-image: url('../img/iconmonstr-christmas-gingerbread-3-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-christmas-gingerbread-3-icon.svg')
-  &.ovoce
-    background-image: url('../img/iconmonstr-apple-os-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-apple-os-icon.svg')
-  &.zelenina
-    background-image: url('../img/iconmonstr-pen-12-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-pen-12-icon.svg')
-  &.mesto
-    background-image: url('../img/iconmonstr-shop-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-shop-icon.svg')
-  &.zvirata
-    background-image: url('../img/iconmonstr-christmas-reindeer-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-christmas-reindeer-icon.svg')
-  &.priroda
-    background-image: url('../img/iconmonstr-brightness-3-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-brightness-3-icon.svg')
-  &.obleceni
-    background-image: url('../img/iconmonstr-christmas-hat-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-christmas-hat-icon.svg')
-  &.stroje
-    background-image: url('../img/iconmonstr-wrench-5-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-wrench-5-icon.svg')
-  &.nabytek
-    background-image: url('../img/iconmonstr-3d-view-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-3d-view-icon.svg')
-  &.doprava
-    background-image: url('../img/iconmonstr-direction-7-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-direction-7-icon.svg')
-  &.povolani
-    background-image: url('../img/iconmonstr-briefcase-4-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-briefcase-4-icon.svg')
-  &.cas
-    background-image: url('../img/iconmonstr-time-10-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-time-10-icon.svg')
-  &.pridavna-jmena
-    background-image: url('../img/iconmonstr-copy-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-copy-icon.svg')
-  &.slovesa
-    background-image: url('../img/iconmonstr-copy-2-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-copy-2-icon.svg')
-  &.zajmena
-    background-image: url('../img/iconmonstr-copy-3-icon-256.png') // fallback pro starší prohlížeče
-    background-image: none, url('../img/iconmonstr-copy-3-icon.svg')
-
 .table-4th-row tr:nth-child(4n) td:last-child
   padding-bottom: 2em
 
@@ -644,12 +605,14 @@ h4, .h4, h5, .h5, h6, .h6
   td, th
     width: 1%
 
-
 .table-condensed
   font-size: 11pt
 
-.table-borderless *
-  border: none !important
+.table-borderless
+  td, tr, th
+    border: none !important
+  &.table
+    border: none !important
 
 .table-no-border-top
   border-top: 1px solid #fff !important
@@ -669,6 +632,24 @@ h4, .h4, h5, .h5, h6, .h6
 .floatThead-container
   background: #fff
 
+.progress-bar.progress-bar-subtle
+  background-color: $gray-darken
+
+#input_word
+  cursor: inherit
+#next_word.btn-default
+  &:hover, &:active, &:focus
+    background-color: #fff
+#next_word.btn-primary:focus
+  outline: none
+  border-color: $primary-color
+  background-color: #fff
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(102, 175, 233, 0.6)
+  //box-shadow: 0px 0px 10px $primary-color-lighten
+#next_word.btn-primary:active
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+  background-color: #fff
+
 footer
   margin-top: 2em
 .footer-links
@@ -684,57 +665,6 @@ footer
   font-size: 10pt
   text-align: justify
   margin: 0 auto
-
-.hi-icon
-  padding: 0
-  margin: 0
-
-.hi-icon-wrap
-  margin: 0
-  padding: 0
-  position: absolute
-
-.hi-icon-wrap .hi-icon
-  background: $primary-color
-  margin-top: -16px
-
-.hi-icon-wrap .hi-icon:hover
-  color: #2A6496
-  text-decoration: none
-
-.hi-icon-effect-5 .hi-icon
-  border: 2px solid $primary-color
-  box-shadow: 0 0 0 4px #fff
-  color: #fff
-  z-index: 2
-
-.hi-icon-wrap:hover:after
-  content: "←  zpět na hlavní stránku"
-  position: fixed
-  display: block
-  top: 0
-  width: 30em
-  height: 50px
-  background: #fff
-  padding-left: 110px
-  margin: 0
-  font-size: 10pt
-  text-align: left
-  line-height: 50px
-  z-index: 1
-
-.hi-icon-wrap:hover:after:hover
-  background: red
-
-.hi-icon-wrap:after:hover
-  background: blue
-
-
-.hi-icon-effect-5 .hi-icon:hover
-  color: $primary-color !important
-  box-shadow: 0 0 0 8px rgba($primary-color, 0.3) !important
-
-
 
 @media print
   .table-3-col
@@ -829,7 +759,7 @@ footer
 
   .stream-item-keywords
     border: 0
-    border-top: 0.3em solid #E8E8E8
+    border-top: 0.3em solid $gray
     padding: 2em
     margin-bottom: 0
     font-size: 8pt
